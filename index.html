@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <!-- Description that will appear in the list of websites in search-->
+    <meta name="description" content="" />
+    <meta
+      name="keywords"
+      content="rent, rent reduction, low rental cost, service costs, rent Netherlands, rent Nederland, rent price, "
+    />
+    <title>Rent Buster</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./favicon.ico">
+
+    <style>
+      .selected-lang{
+        cursor: pointer;
+        font-family: 'Inter', sans-serif;
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.9rem;
+        line-height: 1.55;
+        width: 55px;
+        margin-bottom: 0.4rem;
+      }
+
+      .selected-lang::before{
+          content: '';
+          display: block;
+          width: 32px;
+          height: 22.5px;
+          background-image: url(https://www.worldometers.info/img/flags/uk-flag.gif);
+          background-size: 100%;
+          width: 2.8rem;
+      }
+    </style>
+
+
+  </head>
+  <body>
+     <!-- Cookies consent popup -->
+
+    <div class="consent-popup">
+      <div class="info">
+
+        <p>By using this website you agree to our cookies. </p>
+        <button class="load-button">Ok</button>
+      </div>
+    </div>
+
+    
+
+    <div class="website">
+
+    <!-- Loader -->
+
+    <div class="loader">
+      <div class="loading-text">
+        <span class="loading-text-words">L</span>
+        <span class="loading-text-words">O</span>
+        <span class="loading-text-words">A</span>
+        <span class="loading-text-words">D</span>
+        <span class="loading-text-words">I</span>
+        <span class="loading-text-words">N</span>
+        <span class="loading-text-words">G</span>
+      </div>
+    </div>
+
+    <header class="header" id = "header">
+      <div class="navbar-wrapper">
+        <!-- Logo -->
+        <a href="#home"
+          ><img
+            src="./img/LOGO_cropped.png"
+            alt="RentBuster logo"
+        /></a>
+
+        <!-- Navbar button for mobile -->
+        <button class="mobile-navbar-toggle" aria-expanded="false"></button>
+        <div class="button-bg"></div>
+
+        <!-- Navigation bar -->
+        <nav>
+          <ul id="navbar" class="navbar" data-visible="false">
+            <li class="active"><a href="#home" class="underline-animation">Home</a></li>
+            <li class="active"><a href="#about-us" class="underline-animation">About us</a></li>
+            <li class="active"><a href="#how-we-work" class="underline-animation">How we work</a></li>
+            <li class="active"><a href="#faq" class="underline-animation">FAQ</a></li>
+            <li class="active"><a href="#blog" class="underline-animation">Blog</a></li>
+            <li class="active"><a href="#contact-us" class="underline-animation">Contact us</a></li>
+
+            <li class="active">
+              <a href="https://www.patreon.com/user?u=83272391" target="_blank" class="underline-animation donate-btn">Donate
+                <div class="donate-shadow"></div>
+              </a>
+            </li>
+
+            <div id="theme-toggle-navbar">
+              <img src="./translatedPages/moon.png" alt="moon" class="moon" id="moon-navbar">
+            </div>
+
+          </ul>
+        </nav>
+      </div>
+
+      <div class="lang-menu">
+        <!-- Language button-flag icon -->
+        <div class="selected-lang"></div>
+        <!-- List of languages -->
+        <ul id="languages">
+          <li><a href="./translatedPages/indexNL.html" id="nl">Dutch</a></li>
+          <li><a href="./index.html" id="en">English</a></li>
+          <li><a href="./translatedPages/indexGE.html" id="ge">German</a></li>
+          <li><a href="./translatedPages/indexFR.html" id="fr">French</a></li>
+          <li>
+            <a href="./translatedPages/indexUA.html" id="ua">Ukrainian</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Cursor trail -->
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="goo"
+      version="1.1"
+      width="100%"
+    >
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur
+            in="SourceGraphic"
+            stdDeviation="6"
+            result="blur"
+          ></feGaussianBlur>
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15"
+            result="goo"
+          ></feColorMatrix>
+          <feComposite
+            in="SourceGraphic"
+            in2="goo"
+            operator="atop"
+          ></feComposite>
+        </filter>
+      </defs>
+    </svg>
+
+    <div id="cursor"></div>
+
+    <!-- Shortcut to the news section -->
+
+    <a href="#blog" class="appearing-anim">
+      <p class="latest-news">
+
+        <span class="animated-text">
+          Read our latest news articles
+        </span>
+
+        <span class="particles">
+          <span class="particle">
+            <svg viewBox="0 0 512 512">
+            <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+            </svg>
+          </span>
+        </span> 
+      </p>
+    </a>
+
+    
+
+   
+
+    <!-- Main body of the website -->
+
+    <main id="body">
+      <div class="curve"></div>
+      <div class="theme-toggle" id="theme-toggle">
+        <img src="./translatedPages/moon.png" alt="moon" class="moon" id="moon">
+      </div>
+
+      <!-- HOME SECTION -->
+      <div class="home-wrapper">
+        <div id="home" class="home anim-container">
+          <div class="text-container-home">
+            <h1 class="animated fadeIn1">If the rent's too high,</h1>
+            <h1 class="animated fadeIn2">In the neighbourhood,</h1>
+            <h1 class="animated fadeIn3">Who you gonna call?</h1>
+            <img class="animated fadeInLeft" src="./img/LOGO_cropped.png" alt="rentbuster logo">
+            <!-- <h2>RENT BUSTER!</h2> -->
+            <!-- <img class="animated fadeInLeft" src="/img/RentBuster logo without background.png" alt="rentbuster logo"> -->
+          </div>
+          
+          <div class="video-wrapper">
+            <iframe class="youtube-video" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="line-animation-container-first">
+        <div class="line"></div>
+      </div>
+
+      <!-- ABOUT US SECTION -->
+      <div class="about-us-container" id="about-us" style="margin-top: 0;">
+        <h1>About Me</h1>
+      <div class="about-us">
+        <div class="text-wrapper" id="text-wrapper">
+          <p style="margin-bottom: 10px; margin-top: 7px;">
+            I am Shane. I have lived in NL for 12 years and, like alot of people, I rent my home from a landlord. I founded Rent Buster NL in 2022 after seeing first-hand the outrageous rental prices being asked by Makelaars/landlords in response to the Dutch housing shortage.  My goal is to seek out
+            and alert renters who moved into new apartments/ studios/ rooms in the Netherlands that their landlord may be overcharging them. 
+          </p>
+          <p style="margin: 0;">
+            While there may be a massive shortage of housing in major cities, a large portion of the rental market is still subject to rent-regulation to
+            ensure basic housing is affordable. Some landlords and estate agents ignore these price controls and grossly inflate the asking rent price
+            of accommodation. Tenants are frequently unaware of their right to a rent reduction/fee refund or are too afraid to take action for fear of eviction, and are stuck paying thousands of euro extra per year. 
+          </p>
+          <p style="margin-top: 10px; margin-bottom: 0;">
+            I aim to inform and help as many of these tenants as possible via social media and mail. If you received a letter from me, then you likely are overpaying. Check out our FAQ for more information or send me a message for help.
+          </p>
+        </div>
+
+        <!-- This is the image slider. To add a new picture you neen to
+        copy li with class slide and change the path to the picture
+        also you need to create another button (carousel indicator) -->
+        <div class="carousel">
+          <button class="carouselBtn carouselBtn-left">
+            <img src="img/left-arrow-next.svg" alt="left-arrow-next" />
+          </button>
+
+          <div class="carousel-track-container">
+            <ul class="carousel-track">
+              <li class="slide current-slide">
+                <img
+                  class="carousel-image"
+                  src="./img/Me.jpg"
+                  alt=""
+                />
+              </li>
+              <li class="slide">
+                <img
+                  class="carousel-image"
+                  src="./img/letter.png"
+                  alt=""
+                />
+              </li>
+              <li class="slide">
+                <img
+                  class="carousel-image"
+                  src="./img/Letters.jpg"
+                  alt=""
+                />
+              </li>
+              
+            </ul>
+          </div>
+
+          <button class="carouselBtn carouselBtn-right">
+            <img src="img/right-arrow-next.svg" alt="right-arrow-next" />
+          </button>
+
+          <div class="carousel-nav">
+            <button class="carousel-indicator current-slide"></button>
+            <button class="carousel-indicator"></button>
+            <button class="carousel-indicator"></button>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      
+
+      <div class="line-animation-container">
+        <div class="line"></div>
+      </div>
+
+      <!-- HOW WE WORK SECTION -->
+      <div class="how-we-work" id="how-we-work">
+        <div class="hww-container ">
+          <h1>How I work</h1>
+
+        <div class="picture-and-text">
+          <div class="hww-img" id="firstImg"></div>
+          <p class="hww-text " id="firstText">If you received a letter from me and are convinced that you might be overpaying, it will be necessary to review your documentation (your contract and other agreements you may have made with the landlord to evaluate the strength of your case and determine if there are any unusual circumstances to your case. Timing is important and your contract type will dictate when to take action and when to wait.</p>
+        </div>
+
+        <div class="picture-and-text">
+          <!-- <img src="/img/left-arrow-next.svg" class="hidden-image1" alt=""> -->
+          <div class="hidden-image1 hww-img"></div>
+          <p class="hww-text" id="secondText">In cases where my evaluation report of your apartment has too many uncertainties and unknowns, it might be required to perform a measurement of your apartment. If there are structural defects, overdue maintained issues or other important factors, I will note these down. </p>
+          <div class="hww-img hide-image" id="secondImg"></div>
+        </div>
+
+        <div class="picture-and-text">
+          <div class="hww-img " id="thirdImg"></div>
+          <p class="hww-text " id="thirdText">One approach I may suggest will be to contact your landlord and present your case to him/her. This is entirely optional but it can be helpful to ensure a fast and satisfactory outcome for all. Some landlords may be unaware of the rules of rent-regulation and the points systems and could be open to a deal.</p>
+        </div>
+
+        <div class="picture-and-text">
+          <div class="hidden-image2 hww-img"></div>
+          <p class="hww-text " id="fourthText">In the event that negotiation fails, I will begin the initial rent assessment with the Huurcommissie to start the process of getting your rent reduced. Under most circumstances, this should be started within six months of moving in. The amount of time between the initiation and the judgement varies from case to case. Should we be successful, your rent will be reduced and everything you overpaid since the start of your contract refunded to you.</p>
+          <div class="hww-img hide-image" id="fourthImg"></div>
+        </div> 
+
+        </div>
+      </div>
+
+      <div class="line-animation-container">
+        <div class="line"></div>
+      </div> 
+
+      <!-- FAQ SECTION -->
+      <div class="faq" id="faq">
+        <h2>FAQ</h1>
+        <div class="faq-container">
+          <div class="accordion" id="a1">
+            <button type="button" class="accordionBtn"><p> I just got a letter. How do you know I am living here and what my rent is? </p></button>
+            <div class="accordion-content">
+              <p>The landlord/agency that has rented out the accommodation to you posted advertisements on popular housing websites that I check frequently. Your house/apartment was red-flagged as having suspiciously high rent. I performed a calculation and determined an approximate maximum rent price that you see in the letter. If the difference between this and the current rent price is within an acceptable level of accuracy, then I send a letter to your address a few weeks after the beginning of the contract. I do not know the name of the tenant or anything about the contract you signed. </p>
+            </div>
+          </div>
+
+          <div class="accordion" id="a2">
+            <button type="button" class="accordionBtn">I just got a letter from you but I think you sent it to the wrong address. I live in a 20m2 studio, not a 55m2 apartment.</button>
+            <div class="accordion-content">
+              <p>My apologies. Many ads do not give the house number and sometimes I make mistakes in finding the house letter in multi-room complexes. If someone did recently move into your building, the letter is probably for them. </p>
+            </div>
+          </div>
+
+          <div class="accordion" id="a3">
+            <button type="button" class="accordionBtn"><p>How do I know this isn’t a scam?</p></button>
+            <div class="accordion-content">
+              <p>Rent Buster NL is a registered company in the Netherlands (KvK nummer: 87138840), based in Arnhem with a Dutch bank account and phone number. I offer a free consultation via video call. You are not required to sign/pay anything and you can walk away at any moment.</p>
+            </div>
+          </div>
+
+          <div class="accordion" id="a4">
+            <button type="button" class="accordionBtn">Is there a database that tells me what the max legal rent for any address is?</button>
+            <div class="accordion-content">
+              <p>Unfortunately no, it must be calculated by hand. It varies depending on many factors and changes every year due to fluctuations in the house prices, the layout, the energy rating etc. The gemeente in Rotterdam and Utrecht offer a rudimentary calculator on their websites but they only calculate a possible range of values and only within their respective cities.
+                <br> Links provided:
+                <a href="https://huurprijscalculator.rotterdam.nl/index.html" target="_blank" style="color: cornflowerblue;">Rotterdam</a> ,
+                <a href="https://www.huurteam-utrecht.nl/en/rental-price-checker/" target="_blank" style="color: cornflowerblue;">Utrecht</a></p>
+            </div>
+          </div>
+
+          <div class="accordion" id="a5">
+            <button type="button" class="accordionBtn">I think I am paying too much for my room/house/apartment but it took me months to find this place and I don’t want to upset the landlord and get kicked out for causing trouble. I would rather pay extra than lose this place. What will happen if I complain?</button>
+            <div class="accordion-content">
+              <p>That is understandable. Finding places to rent in the Netherlands is difficult and it is possible that undertaking this procedure will sour the relationship between you and the landlord. If you do have a temporary contract, it is possible to wait until your contract becomes permanent before initiating the procedure. To prevent abuse, the Huurcommissie gives tenants more flexibility with the deadline for asking for a rent reduction (up to six months after the end of the temporary contract). Once your contract becomes permanent (or you leave) every thing you overpaid can be refunded to you.
+                <br style="margin-bottom: 0.7rem;"> Also this is only if you have fixed term contract (less than 2 years) and you want to stay longer. If you have a fixed-term contract and you are sure you want to leave at the end of it, then you have no added risk to eviction. If you have an indefinite contract then the landlord will be powerless to evict you for appealing the rent price. You will likely be able to stay there as long as you want. Should the landlord try to evict you, you will have an arsenal of tenant rights to fall back on to prevent your this. As long as you keep your nose clean there should be no reason your landlord can evict you and most CERTAINLY not because you exercised your rights as a tenant.
+
+                </p>
+            </div>
+          </div>
+
+          <div class="accordion" id="a6">
+            <button type="button" class="accordionBtn">Okay, so what is your end in all this?</button>
+            <div class="accordion-content">
+              <p>I have had personal experience with dealing with bad landlords who overcharge tenants. I don’t like to see people get taken advantage of and I want to do something about it. Unfortunately it is not free to do this. I do want to do this full-time and, unfortunately, I am not a salaried employee of a rental organization. Operating a website, researching properties and sending letters costs money and I do have to pay my own rent and eat. With regard to how much, that is entirely up to you: I operate on money you donate from a successful settlement. If I am successful, I may be saving you thousands of euro per year. You can decide how much my services were worth to you. Similar organizations, such as Bumarang, demand for a large cut of the settlement (>50%) in exchange for the same service. </p>
+            </div>
+          </div>
+
+
+          <div class="accordion" >
+            <button type="button" class="accordionBtn">Why don’t I just go to a rental organization? Why do I need you at all?</button>
+            <div class="accordion-content">
+              <p>There are indeed many organizations that can help you with dealing with your landlord. Some of them charge for their services. They are also reactionary: They only respond to requests rather than the proactive approach taken by Rent Buster NL in seeking out tenants who don’t know they are overpaying.
+                <br style="margin-bottom: 0.7rem;"> Of course you are perfectly capable of building your own case against your landlord. In fact, it is good that you show this initiative because the more people that do this, the better. My services are for those of you who dont have the time, energy or knowledge to deal with the paperwork, the back and forth with the landlord or the research required.</p>
+            </div>
+          </div>
+		  
+          <div class="accordion" >
+            <button type="button" class="accordionBtn">Your letter told me that I might have paid an illegal agency fee. Is this not normal?</button>
+            <div class="accordion-content">
+              <p>Nope, it is not normal. According to a 2016 Supreme Court ruling, a makelaar/estate agent is forbidden from representing both sides in a contract. They can only accept payment from the side that they represent. If you found the ad for the apartment you live in on a website, this means that the landlord has already engaged the makelaar's services
+			   and can only accept payment from him/her. Any fees charged to the tenant other than the rent are forbidden. This includes : key money, admin fees, registration fees, contract costs. There are many euphemisms for it. Most agencies do not charge these fees anymore but some are still trying to sneak them into the transaction, particularly if expats, who dont know the rules, are involved </p>
+            </div>
+        	</div>
+
+
+          <div class="accordion" >
+            <button type="button" class="accordionBtn">Where can I find out more about this?                   </button>
+            <div class="accordion-content">
+              <p>Check out my  <a href="https://www.reddit.com/r/Rentbusters/" target="_blank" style="color: cornflowerblue;">subreddit </a> I am very active on it and post many articles about renting in the Netherlands. I post all types of articles, useful calculators, tips for getting service cost refunds and some humourous material.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="line-animation-container">
+        <div class="line"></div>
+      </div>
+
+
+
+      <div class="blog" id="blog">
+
+        <h1 style="margin-top: 0rem">Latest news</h1>
+
+      
+        <article class="article blog-post">
+            <a style="text-decoration: none;" href="https://www.reddit.com/r/NetherlandsHousing/comments/vwuphe/the_predatory_tenant_how_to_hunt_for_cheap/" target="_blank">
+              <img src="https://cdn.pixabay.com/photo/2018/04/13/21/24/lion-3317670_960_720.jpg" alt="" class="post-img">
+              <div class="post-content">
+                <h2 class="post-name">The predatory tenant: How to hunt for cheap accommodation and screw greedy landlords instead of the other way around</h2>
+                <p class="post-text">Netherlands has being going through a bit of a rough period with its housing market. The Dutch government is trying to reduce its nitrogen emissions and first t</p>
+              </div>
+            </a>
+        </article>
+
+        <article class="article blog-post">
+            <a style="text-decoration: none;" href="https://www.reddit.com/r/NetherlandsHousing/comments/vwuphe/the_predatory_tenant_how_to_hunt_for_cheap/" target="_blank">
+              <img src="https://www.holland.com/upload_mm/d/f/c/69557_fullimage_sint-servaas-brug-maas-maastricht-stad-eighty8things-1360%20copy.jpg" alt="" class="post-img">
+              <div class="post-content">
+                <h2 class="post-name">9 things you wish you knew about renting in Maastricht and the Netherlands before you came here <br><br> </h2>
+                <p class="post-text">Many of the redditors/ facebook/ forum users who rent apartments and studios in the Netherlands seem to be afraid to bring up issues with the landlord that they fear might get them evicted or their contracts not renewed.</p>
+              </div>
+            </a>
+        </article>
+
+      </div>
+
+
+
+      <div class="line-animation-container">
+        <div class="line"></div>
+      </div>
+
+      <!-- CONTACT US SECTION -->
+      <div class="contact-us" id="contact-us">
+        <div class="contact-form">
+          <h2>Contact us</h2>
+          <p>Fill out the form and I will contact you soon. After submission you will be redirected to a page with a captcha to prevent spam</p>
+
+          <form action="https://formspree.io/f/xoqbjbnv" method="POST" id="form">
+              <div class="group">
+                <div class="empty-space"></div>
+                <input type="text" name="firstName" id="firstName" placeholder="First name" class="form-element" required>
+              </div>
+              
+              <div class="group">
+                <div class="empty-space"></div>
+                <input type="text" name="secondName" id="secondName" placeholder="Second name (optional)" class="form-element">
+              </div>
+
+              <div class="group">
+                <div class="empty-space"></div>
+                <input type="email" name="email" id="email" placeholder="Email" class="form-element" required>
+              </div>
+
+              <div class="group">
+                <div class="empty-space"></div>
+                <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Phone number (optional)" class="form-element">
+              </div>
+
+
+              <div class="full">
+                <div class="group">
+                  <div class="empty-space-big"></div>
+                <textarea name="message" id="message" class="form-element" placeholder="Your message" spellcheck="false"></textarea>
+                </div>
+              </div>
+
+              <br>
+
+              <div class="submit">
+                <input type="submit" value="Send">
+              </div>
+
+          </form>
+        </div>
+
+        <!-- <div class="social-media"></div> -->
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-row">
+          <div class="footer-column" id="info-footer">
+            <h4>Contacts</h4>
+            <ul>
+              <li><p>Contact phone:&#10240<span class="break"></span>+31 681261764</p></li>
+              <li><p>Whatsapp:&#10240<span class="break"></span>+31 681261764</p></li>
+              <li><p>Email:&#10240<span class="break"></span>info(at)rentbuster(dot)nl</p></li>
+			        <li><p>KvK:&#10240<span class="break"></span>87138840</p></li>
+			        <li><p>Bank Account number:&#10240<span class="break"></span>NL80INGB0755908910</p></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Social media</h4>
+            <div class="social-media">
+              <a href="https://www.reddit.com/r/Rentbusters/" target="_blank"><img src="./img/reddit-logo.png" alt="reddit-icon" class="reddit-icon"></a>
+              <a href="https://www.facebook.com/profile.php?id=100085087598391" target="_blank"><img src="./img/facebook-icon.png" alt="facebook-icon" class="facebook-icon"></a>
+			        <a href="https://www.youtube.com/channel/UCjg0X1ZwTVahyRfkCr2OkNg" target="_blank"><img src="./img/youtube-logo.png" alt="youtube-icon" class="youtube-icon"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="/Privacyverklaring.pdf" target="_blank" class="footer-document">Privacyverklaring - © <script type="text/javascript">document.write( new Date().getFullYear() )</script> RentBusterNL</a>
+      <a href="https://lifeconsciousness.github.io/Contact_page/" target="_blank" class="credit">Made by Maksym Tovstolis</a>
+    </footer>
+
+    <!-- <script src="./js/carousel.js"></script> -->
+    <script src="./js/cursor.js"></script>
+    <script src="./js/navbar.js"></script>
+
+  </div>
+
+  <script src="./script.js"></script>
+
+  <script>
+    const website = document.querySelector('.website');
+    const consentPopup = document.querySelector('.consent-popup');
+    if(localStorage.getItem('cookieChoice') === '0' ){
+      website.style.display = 'block';
+      consentPopup.style.display = 'none';
+    } else{
+      const loadButton = document.querySelector('.load-button');
+      loadButton.addEventListener('click', () => {
+        website.style.display = 'block';
+        consentPopup.style.display = 'none';
+      });
+    }
+  </script>
+
+  </body>
+</html>

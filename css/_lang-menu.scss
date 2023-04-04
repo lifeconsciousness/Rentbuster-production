@@ -1,0 +1,84 @@
+//language selection menu
+
+.lang-menu {
+    margin-top: 0.4rem;
+    position: relative;
+    width: 5rem;
+    top: 0.6rem;
+    right: 0.1rem;
+}
+
+
+
+.lang-menu ul {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(242, 241, 241);
+    //border: 1px solid rgb(242, 241, 241);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    //padding: 0.14rem;
+    display: none;
+    position: absolute;
+    top: 2.2rem;
+    right: 1rem;
+}
+
+.lang-menu:hover ul {
+    display: block;
+}
+
+.lang-menu ul li {
+    list-style: none;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.lang-menu ul li a {
+    width: 125px;
+    display: block;
+    padding: 7px 8px;
+    text-decoration: none;
+    color: #141414;
+}
+
+.lang-menu ul li a:hover {
+    background-color: #e4e3e3;
+    border-radius: 5px;
+}
+
+.lang-menu ul li a::before {
+    content: '';
+    display: inline-block;
+    height: 21px;
+    vertical-align: middle;
+    margin-right: 10px;
+    background-image: url(https://www.worldometers.info/img/flags/uk-flag.gif);
+    background-size: 100%;
+    width: 2rem;
+}
+
+#nl:before {
+    background-image: url(https://www.worldometers.info/img/flags/nl-flag.gif);
+}
+
+#en:before {
+    background-image: url(https://www.worldometers.info/img/flags/uk-flag.gif);
+    background-position: center;
+    background-size: 125%;
+}
+
+#ge:before {
+    background-image: url(https://www.worldometers.info/img/flags/small/tn_gm-flag.gif);
+    height: 19px;
+}
+
+#fr:before {
+    background-image: url(https://www.worldometers.info/img/flags/small/tn_fr-flag.gif);
+}
+
+#ua:before {
+    background-image: url(https://www.worldometers.info/img/flags/small/tn_up-flag.gif);
+}
