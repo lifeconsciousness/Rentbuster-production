@@ -357,10 +357,6 @@
     transform: scale(0.5);
   }
 }
-.appearing-anim {
-  animation: appearSmooth 8.5s forwards;
-}
-
 @keyframes appearSmooth {
   0% {
     opacity: 0;
@@ -385,6 +381,18 @@
   align-items: center;
   width: 100vw;
   height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+.consent-popup .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.consent-popup .load-button {
+  font-family: inherit;
+  width: 100px;
+  height: 30px;
 }
 
 .loader {
@@ -453,7 +461,7 @@
 @keyframes blur-text {
   0% {
     scale: 1;
-    transform: translateY(30px);
+    transform: translateY(17px);
   }
   100% {
     transform: translateY(0px);
@@ -491,6 +499,7 @@
   width: 300px;
   height: 300px;
   border-radius: 50%;
+  scale: 0.7;
   transition: 1s;
   opacity: 0;
   z-index: 1 !important;
@@ -1142,15 +1151,6 @@ nav {
   color: var(--black-main);
 }
 
-#form {
-  opacity: 0;
-}
-
-.contact-form-animation {
-  opacity: 1;
-  animation: fadeInBottomForm 2s both;
-}
-
 @keyframes fadeInBottomForm {
   0% {
     transform: scale(1.15);
@@ -1621,10 +1621,7 @@ body.loaded .loader {
   z-index: -100;
 }
 body.loaded .text-wrapper {
-  opacity: 0;
-}
-body.loaded .video-wrapper {
-  animation: videoFromRight 7.4s both;
+  opacity: 1;
 }
 body.loaded .video-wrapper iframe {
   display: block;
@@ -2100,7 +2097,6 @@ h2 {
 @media (min-width: 913px) {
   .about-us-text-animation {
     opacity: 1;
-    animation: text-wrapper-animation 1.6s both;
   }
   @keyframes text-wrapper-animation {
     0% {
@@ -2138,9 +2134,6 @@ h2 {
 @media (max-width: 913px) {
   .about-us-text-animation {
     animation: none;
-  }
-  .text-wrapper {
-    animation: text-wrapper-animation 1.3s forwards;
   }
   @keyframes text-wrapper-animation {
     0% {
