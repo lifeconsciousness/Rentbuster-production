@@ -310,13 +310,14 @@
 }
 .latest-news {
   position: absolute;
-  top: 91vh;
+  bottom: 4vh;
   width: 100%;
   text-align: center;
   font-family: "Inter", sans-serif;
   display: flex;
   justify-content: center;
-  color: rgb(46, 46, 220) !important;
+  color: rgb(92, 92, 255) !important;
+  font-size: 120%;
 }
 
 @media (max-width: 333px) {
@@ -468,7 +469,7 @@
   }
 }
 .donate-btn {
-  color: rgb(40, 40, 255) !important;
+  color: rgb(92, 92, 255) !important;
   position: relative;
   z-index: 1000;
   transition: 1s all;
@@ -573,9 +574,19 @@ nav {
   background: none;
   font-size: 1.55rem;
 }
+@media (min-width: 913px) {
+  .navbar {
+    align-items: center;
+  }
+}
 .navbar li {
   list-style-type: none;
   margin-left: 15px;
+}
+@media (min-width: 913px) {
+  .navbar li {
+    text-align: center;
+  }
 }
 .navbar .underline-animation {
   position: relative;
@@ -1284,6 +1295,37 @@ footer .footer-document {
     margin: 0 auto;
   }
 }
+.banner {
+  display: none;
+}
+@media (max-width: 913px) {
+  .banner {
+    display: block;
+    position: absolute;
+    bottom: 35px;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-20px);
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: rgb(92, 92, 255);
+    font-family: "Inter", sans-serif;
+  }
+}
+@media (max-width: 913px) and (max-width: 290px) {
+  .banner {
+    font-size: 1rem;
+  }
+}
+.banner .banner-text {
+  border: 1px solid var(--black-main);
+  padding: 10px;
+}
+.banner .banner-text .particles {
+  transform: translateX(-8px);
+  transform: translateY(3px);
+}
+
 .dark-theme {
   --black-main: rgb(238, 232, 232);
   --white-main: rgb(15, 14, 14);
@@ -2109,7 +2151,7 @@ h2 {
   }
   .carousel-animation {
     opacity: 1;
-    animation: carousel-animation 1.6s both;
+    animation: none;
   }
 }
 @media (min-width: 913px) and (max-width: 913px) {
@@ -2123,8 +2165,7 @@ h2 {
 @media (min-width: 913px) {
   @keyframes carousel-animation {
     0% {
-      opacity: 0;
-      transform: translateY(-50px);
+      opacity: 1;
     }
     100% {
       opacity: 1;

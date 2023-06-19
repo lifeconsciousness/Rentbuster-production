@@ -1,13 +1,17 @@
 .latest-news {
   position: absolute;
-  top: 91vh;
+  // top: 89vh;
+  bottom: 4vh;
   width: 100%;
   text-align: center;
   font-family: 'Inter', sans-serif;
 
   display: flex;
   justify-content: center;
-  color: rgb(46, 46, 220) !important;
+  // color: rgb(46, 46, 220) !important;
+  color: rgb(92, 92, 255) !important;
+
+  font-size: 120%;
 }
 
 @media (max-width: 333px) {
