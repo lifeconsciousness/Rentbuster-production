@@ -1,0 +1,41 @@
+//line animation
+
+.line-animation-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 4rem 0 0 0;
+}
+
+.line-animation-container-first {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10rem 0 0 0;
+}
+
+.line {
+    content: '';
+    top: 50%;
+    transform: translateZ(-50%);
+    width: 87%;
+    //width: 70%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--black-main) 0%, var(--black-main) 70%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0) 100%);
+    background-size: 25px;
+    animation: animateLine 0.5s linear infinite;
+}
+
+@keyframes animateLine {
+    0% {
+        background-position: 0px;
+    }
+
+    100% {
+        background-position: -25px;
+    }
+}
+
+.line-animation {
+    grid-column: 1/3;
+}
