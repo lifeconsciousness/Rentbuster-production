@@ -1,61 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <!-- Description that will appear in the list of websites in search-->
-    <meta name="description" content="" />
-    <meta
-      name="keywords"
-      content="rent, rent reduction, low rental cost, service costs, rent Netherlands, rent Nederland, rent price, "
-    />
-    <title>Rent Buster</title>
-    <link rel="stylesheet" href="../css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="/favicon.ico">
 
-    <style>
-      .selected-lang{
-        cursor: pointer;
-        font-family: 'Inter', sans-serif;
-        display: flex;
-        justify-content: space-between;
-        font-size: 0.9rem;
-        line-height: 1.55;
-        width: 55px;
-        margin-bottom: 0.4rem;
-      }
-      
-      .selected-lang::before{
-          content: '';
-          display: block;
-          width: 32px;
-          height: 22.5px;
-          background-image: url(https://www.worldometers.info/img/flags/small/tn_up-flag.gif);
-          background-size: 80%;
-          width: 2.8rem;
-      }
-    </style>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <!-- Description that will appear in the list of websites in search-->
+  <meta name="description" content="" />
+  <meta name="keywords"
+    content="rent, rent reduction, low rental cost, service costs, rent Netherlands, rent Nederland, rent price, " />
+  <title>Rent Buster</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet" />
+  <link rel="icon" href="/favicon.ico">
 
-  </head>
-  <body>
-    <!-- Cookies consent popup -->
+  <style>
+    .selected-lang {
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      line-height: 1.55;
+      width: 55px;
+      margin-bottom: 0.4rem;
+    }
 
-    <div class="consent-popup">
+    .selected-lang::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 22.5px;
+      background-image: url(https://www.worldometers.info/img/flags/nl-flag.gif);
+      background-size: 76%;
+      width: 2.8rem;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Cookies consent popup -->
+
+  <!-- <div class="consent-popup">
       <div class="info">
 
         <p>Door gebruik te maken van deze website gaat u akkoord met onze cookies.</p>
         <button class="load-button">Ok</button>
       </div>
-    </div>
+    </div> -->
 
 
 
-    <div class="website">
+  <div class="website" style="display: block;">
 
     <!-- Loader -->
 
@@ -71,15 +69,10 @@
       </div>
     </div>
 
-
-    <header class="header" id = "header">
+    <header class="header" id="header">
       <div class="navbar-wrapper">
         <!-- Logo -->
-        <a href="#home"
-          ><img
-            src="../img/LOGO_cropped.png"
-            alt="RentBuster logo"
-        /></a>
+        <a href="#home"><img src="../img/LOGO_cropped.png" alt="RentBuster logo" /></a>
 
         <!-- Navbar button for mobile -->
         <button class="mobile-navbar-toggle" aria-expanded="false"></button>
@@ -90,18 +83,18 @@
           <ul id="navbar" class="navbar" data-visible="false">
             <li class="active"><a href="#home" class="underline-animation">Головна</a></li>
             <li class="active"><a href="#about-us" class="underline-animation">Про нас</a></li>
-            <li class="active"><a href="#how-we-work" class="underline-animation">Зниження ціни оренди</a></li>
-            <li class="active"><a href="#faq" class="underline-animation">Часті питання</a></li>
+            <li class="active"><a href="#how-we-work" class="underline-animation">Як ми працюємо</a></li>
+            <li class="active"><a href="#faq" class="underline-animation">FAQ</a></li>
             <li class="active"><a href="#blog" class="underline-animation">Блог</a></li>
-            <li class="active"><a href="#contact-us" class="underline-animation">Контакти</a></li>
-           
+            <li class="active"><a href="#contact-us" class="underline-animation">Зв'язатися з нами</a></li>
+
             <li class="active">
-              <a href="https://www.patreon.com/user?u=83272391" target="_blank" class="underline-animation donate-btn">Donate
-                <div class="donate-shadow" style="margin-right: 20px;"></div>
+              <a href="https://www.patreon.com/user?u=83272391" target="_blank"
+                class="underline-animation donate-btn">Пожертвувати
+                <div class="donate-shadow"></div>
               </a>
             </li>
-           
-           
+
             <div id="theme-toggle-navbar">
               <img src="../img/moon.png" alt="moon" class="moon" id="moon-navbar">
             </div>
@@ -127,54 +120,19 @@
     </header>
 
     <!-- Cursor trail -->
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="goo"
-      version="1.1"
-      width="100%"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" class="goo" version="1.1" width="100%">
       <defs>
         <filter id="goo">
-          <feGaussianBlur
-            in="SourceGraphic"
-            stdDeviation="6"
-            result="blur"
-          ></feGaussianBlur>
-          <feColorMatrix
-            in="blur"
-            mode="matrix"
-            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15"
-            result="goo"
-          ></feColorMatrix>
-          <feComposite
-            in="SourceGraphic"
-            in2="goo"
-            operator="atop"
-          ></feComposite>
+          <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"></feGaussianBlur>
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15" result="goo">
+          </feColorMatrix>
+          <feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite>
         </filter>
       </defs>
     </svg>
 
     <div id="cursor"></div>
 
-    <!-- Shortcut to the news section -->
-
-    <a href="#blog" class="appearing-anim">
-      <p class="latest-news">
-
-        <span class="animated-text">
-          Читайте наші останні новини
-        </span>
-
-        <span class="particles">
-          <span class="particle">
-            <svg viewBox="0 0 512 512">
-            <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
-            </svg>
-          </span>
-        </span> 
-      </p>
-    </a>
 
 
     <main id="body">
@@ -185,110 +143,111 @@
 
       <!-- HOME SECTION -->
       <div class="home-wrapper">
-      <div id="home" class="home anim-container">
-        <div class="text-container-home">
-          <h1 class="animated">If the rent's too high,</h1>
-          <h1 class="animated">In the neighbourhood,</h1>
-          <h1 class="animated">Who you gonna call?</h1>
-          <img class="animated" src="../img/LOGO_cropped.png" alt="rentbuster logo">
-          <!-- <h2>RENT BUSTER!</h2> -->
-          <!-- <img class="animated fadeInLeft" src="/img/RentBuster logo without background.png" alt="rentbuster logo"> -->
+        <div id="home" class="home anim-container" style="justify-content: center;">
+          <div class="text-container-home">
+            <h1 class="animated text1">If the rent's too high,</h1>
+            <h1 class="animated text2">In the neighbourhood,</h1>
+            <h1 class="animated text3">Who you gonna call?</h1>
+            <!-- <h1 class="animated fadeIn1">If the rent's too high,</h1>
+            <h1 class="animated fadeIn2">In the neighbourhood,</h1>
+            <h1 class="animated fadeIn3">Who you gonna call?</h1> -->
+            <img class="animated logo-home-section" src="../img/LOGO_cropped.png" alt="rentbuster logo">
+            <!-- <h2>RENT BUSTER!</h2> -->
+            <!-- <img class="animated fadeInLeft" src="/img/RentBuster logo without background.png" alt="rentbuster logo"> -->
+          </div>
+          <div class="video-wrapper" style="display: none;">
+            <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/xwSltGbK46E"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen=""></iframe>
+          </div>
+
         </div>
-        
-        <div class="video-wrapper">
-          <iframe
-            class="youtube-video"
-            width="560"
-            height="315"
-            src=""
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-        
-      </div>
       </div>
 
-      <div class="line-animation-container-first">
-        <div class="line"></div>
-      </div>
+      <!-- Shortcut to the news section -->
+      <a href="https://calculator.rentbuster.nl" target="_blank" class="appearing-anim">
+        <p class="latest-news">
+
+          <span class="animated-text"
+            style="color: rgb(92, 92, 255); --darkreader-inline-color: var(--darkreader-text-5c5cff, #5a96ff);"
+            data-darkreader-inline-color="">
+            Спробуйте наш новий калькулятор орендної плати
+          </span>
+
+          <span class="particles">
+            <span class="particle">
+              <svg viewBox="0 0 512 512">
+                <path
+                  d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z">
+                </path>
+              </svg>
+            </span>
+          </span>
+        </p>
+      </a>
 
       <!-- ABOUT US SECTION -->
-      <div class="about-us-container" id="about-us">
-        <h1>Про нас</h1>
-      <div class="about-us">
-        <div class="text-wrapper" id="text-wrapper">
-          <p style="margin-bottom: 10px; margin-top: 7px;">
-            Rent Buster NL була заснована в 2022 році для вирішення проблеми
-            орендодавців, які завищують плату за оренду житла. Організація спрямована на пошук
-            та <span class="highlight-text">попередження людей, які переїхали в нове житло</span>
-            в Нідерландах<span class="highlight-text">, що вони можуть переплачувати за оренду. </span>
-          </p>
-          <p style="margin: 0;">
-            Незважаючи на те, що у великих містах може спостерігатися значний дефіцит житла, значна
-            частина ринку оренди житла підлягає суворому контролю за цінами, щоб
-            забезпечення доступності базового житла. <span class="highlight-text">Орендодавці та агенти з нерухомості
-              регулярно ігнорують ці заходи контролю за цінами та значно завищують ціни</span>
-              житла для отримання більшого прибутку, іноді до 200%. Вони
-              покладаються на незнання більшості орендарів законів або страх втратити житло, щоб вийти сухими з води.
-          </p>
-          <p style="margin-top: 10px; margin-bottom: 0;">
-            Rent Buster NL має на меті <span class="highlight-text">допомогти цим орендарям
-              орендарям змінити цю завищену ціну.</span> Якщо ви отримали від нас
-              від нас, то, швидше за все, ви переплачуєте. Ознайомтеся з нашими
-              FAQ для отримання додаткової інформації або зверніться до нас за безкоштовною консультацією.
-          </p>
-        </div>
+      <div class="about-us-container" id="about-us" style="margin-top: 0;">
+        <h1>Про мене</h1>
+        <div class="about-us">
+          <div class="text-wrapper" id="text-wrapper">
+            <p style="margin-bottom: 10px; margin-top: 7px;">
+              Привіт. Мене звати Шейн. Я живу в Нідерландах вже 14 років і, як і багато людей, орендую свій будинок у власника. Я заснував Rent Buster NL у 2022 році після того, як власними очима побачив незрозумілі ціни на оренду, які встановлюють агенти/власники у відповідь на дефіцит житла в Нідерландах. Моя мета - знайти і попередити орендарів, які переїхали в нові квартири/студії/кімнати в Нідерландах, про те, що їхній власник може запитувати занадто багато.
+            </p>
+            <p style="margin: 0;">
+              Хоча у великих містах спостерігається величезний дефіцит житла, значна частина ринку оренди все ще підлягає регулюванню, щоб забезпечити доступність базового житла. Деякі власники та агенти з нерухомості ігнорують цей ціновий контроль і грубо завищують ціни оренди житла. Орендарі часто не знають про своє право на зниження орендної плати/повернення витрат або занадто бояться вживати заходів через страх виселення, і продовжують щорічно платити тисячі євро зайвих грошей.
+            </p>
+            <p style="margin-top: 10px; margin-bottom: 0;">
+              Я прагну інформувати і допомогти якомога більше таких орендарів через соціальні мережі та пошту. Якщо ви отримали листа від мене, ви, ймовірно, платите занадто багато. Перегляньте наші FAQ для отримання додаткової інформації або надішліть мені повідомлення для отримання допомоги.
+            </p>
+            <p style="margin-top: 10px; margin-bottom: 0;">
+            </p>
+            <p></p>
+          </div>
 
-        <!-- This is the image slider. To add a new picture you neen to
+
+
+
+
+          <!-- This is the image slider. To add a new picture you neen to
         copy li with class slide and change the path to the picture
         also you need to create another button (carousel indicator) -->
-        <div class="carousel">
-          <button class="carouselBtn carouselBtn-left">
-            <img src="../img/left-arrow-next.svg" alt="left-arrow-next" />
-          </button>
+          <div class="carousel">
+            <button class="carouselBtn carouselBtn-left">
+              <img src="../img/left-arrow-next.svg" alt="left-arrow-next">
+            </button>
 
-          <div class="carousel-track-container">
-            <ul class="carousel-track">
-              <li class="slide current-slide">
-                <img
-                  class="carousel-image"
-                  src="../img/Me.jpg"
-                  alt=""
-                />
-              </li>
-              <li class="slide">
-                <img
-                  class="carousel-image"
-                  src="../img/letter.png"
-                  alt=""
-                />
-              </li>
-              <li class="slide">
-                <img
-                  class="carousel-image"
-                  src="../img/Letters.jpg"
-                  alt=""
-                />
-              </li>
-              
-            </ul>
-          </div>
+            <div class="carousel-track-container">
+              <ul class="carousel-track" style="transform: translateX(0px);">
+                <li class="slide current-slide" style="left: 0px;">
+                  <img class="carousel-image" src="../img/Me.jpg" alt="">
+                </li>
+                <li class="slide" style="left: 590.398px;">
+                  <img class="carousel-image" src="../img/letter.png" alt="">
+                </li>
+                <li class="slide" style="left: 1180.8px;">
+                  <img class="carousel-image" src="../img/Letters.jpg" alt="">
+                </li>
 
-          <button class="carouselBtn carouselBtn-right">
-            <img src="../img/right-arrow-next.svg" alt="right-arrow-next" />
-          </button>
+              </ul>
+            </div>
 
-          <div class="carousel-nav">
-            <button class="carousel-indicator current-slide"></button>
-            <button class="carousel-indicator"></button>
-            <button class="carousel-indicator"></button>
+            <button class="carouselBtn carouselBtn-right">
+              <img src="../img/right-arrow-next.svg" alt="right-arrow-next">
+            </button>
+
+            <div class="carousel-nav">
+              <button class="carousel-indicator current-slide"></button>
+              <button class="carousel-indicator"></button>
+              <button class="carousel-indicator"></button>
+            </div>
           </div>
         </div>
       </div>
-      </div>
+
+
+
 
       <div class="line-animation-container">
         <div class="line"></div>
@@ -299,102 +258,203 @@
         <div class="hww-container ">
           <h1>Як ми працюємо</h1>
 
-        <div class="picture-and-text">
-          <div class="hww-img" id="firstImg"></div>
-          <p class="hww-text " id="firstText">Якщо ви отримали лист від RentBuster і переконані, що переплачуєте, Rent Buster NL представить вашу справу орендодавцю і проведе переговори від вашого імені про зниження орендної плати. Зазвичай це не є обов'язковим кроком у деяких випадках, але корисно шукати дипломатичне рішення перед тим, як звертатися до Huurcommissie. </p>
-        </div>
+          <div class="picture-and-text">
+            <div class="hww-img" id="firstImg"></div>
+            <p class="hww-text " id="firstText">Якщо ви отримали листа від RentBuster і переконані, що ви можете платити занадто багато, Rent Buster NL представить вашу справу власникові і вестиме переговори від вашого імені щодо зниження орендної плати. У деяких випадках це не обов'язковий крок, але корисно шукати дипломатичне рішення перед зверненням до Комісії з оренди житла (Huurcommissie).</p>
+          </div>
 
-        <div class="picture-and-text">
-          <!-- <img src="/img/left-arrow-next.svg" class="hidden-image1" alt=""> -->
-          <div class="hidden-image1 hww-img"></div>
-          <p class="hww-text" id="secondText">Існує необхідний період очікування, перш ніж справа може бути передана на розгляд в судовий орган, і в той же час ви повинні платити орендну плату. Rent Buster NL проведе більш точну оцінку орендної плати за цей час, якщо це буде необхідно, якщо існує вузька різниця між ціною орендної плати та граничною межею орендної плати. </p>
-          <div class="hww-img hide-image" id="secondImg"></div>
-        </div>
+          <div class="picture-and-text">
+            <!-- <img src="/img/left-arrow-next.svg" class="hidden-image1" alt=""> -->
+            <div class="hidden-image1 hww-img"></div>
+            <p class="hww-text" id="secondText">Якщо власник не відповідає на наш запит або якщо ви не згодні з його/її контрпропозицією, ми продовжимо справу в Комісії з оренди житла. Rent Buster подбає про паперову роботу/витрати в Комісії з оренди житла і тримає вас у курсі подій. </p>
+            <div class="hww-img hide-image" id="secondImg"></div>
+          </div>
 
-        <div class="picture-and-text">
-          <div class="hww-img " id="fourthImg"></div>
-          <p class="hww-text " id="thirdText">Хоча я намагаюся зробити все можливе, щоб визначити правильну приблизну ціну оренди до того, як ми зв'яжемося електронною поштою, можливо, спочатку необхідно провести незалежний вимір/оцінку Вашої квартири/кімнати/студії для точного розрахунку орендної плати, особливо якщо вона знаходиться близько до кордону лібералізації. Мені також потрібно буде переглянути ваш договір, щоб заповнити заявку.</p>
-        </div>
+          <div class="picture-and-text">
+            <div class="hww-img " id="thirdImg"></div>
+            <p class="hww-text " id="thirdText">Хоча я докладаю максимум зусиль, щоб визначити правильну орієнтовну ціну оренди перед нашим контактним листом, спочатку може знадобитися провести незалежне вимірювання/оцінку вашої квартири/кімнати/студії для точного розрахунку орендної плати, особливо якщо вона знаходиться близько до межі лібералізації. Мені також потрібно буде переглянути ваш контракт, щоб завершити заявку.</p>
+          </div>
 
-        <div class="picture-and-text">
-          <div class="hidden-image2 hww-img"></div>
-          <p class="hww-text " id="fourthText">Ми працюємо за принципом "не лікуємо, не платимо". Щодо гонорару: Якщо наша справа буде успішною і Ваша орендна плата буде знижена і заднім числом повернута за місяці, в яких Ви проживали, наш гонорар становитиме різницю між старою ціною оренди і новою (+ 21% BTW). Плата не стягується до тих пір, поки ви не отримаєте певну знижену ціну оренди. Будь-які витрати з Huurcommissee покриваються нами. Якщо оренда не буде знижена, плата не стягується.</p>
-          <div class="hww-img hide-image" id="thirdImg"></div>
-        </div> 
+          <div class="picture-and-text">
+            <div class="hidden-image2 hww-img"></div>
+            <p class="hww-text " id="fourthText">У разі сприятливого рішення Комісії з оренди житла власник буде зобов'язаний знизити вашу орендну плату і повернути вам суму, сплачену занадто, з початку вашого контракту/заявки.</p>
+            <div class="hww-img hide-image" id="fourthImg"></div>
+          </div>
 
         </div>
       </div>
 
       <div class="line-animation-container">
         <div class="line"></div>
-      </div> 
+      </div>
 
       <!-- If you want to justify text in questions find .accordionBtn in scss file and uncomment text-align: justify -->
       <!-- FAQ SECTION -->
       <div class="faq" id="faq">
-        <h2>Часті питання</h1>
+        <h2>FAQ</h2>
         <div class="faq-container">
           <div class="accordion" id="a1">
-            <button type="button" class="accordionBtn"><p>Я щойно отримав листа. Як ви дізналися, що я тут живу і яка в мене оренда?</p></button>
+            <button type="button" class="accordionBtn">
+              <p> Я щойно отримав листа. Звідки ви знаєте, що я тут живу і яка моя орендна плата? </p>
+            </button>
             <div class="accordion-content">
-              <p>Орендодавець/агентство, яке здало Вам житло, розмістило оголошення на популярних веб-сайтах з продажу житла, які я часто перевіряю. Ваш будинок/квартира був позначений червоним прапорцем як такий, що має підозріло високу орендну плату. Я провів розрахунок і визначив приблизну максимальну ціну оренди, яку Ви бачите в листі. Якщо різниця між нею і поточною ціною оренди знаходиться в межах прийнятного рівня точності, то через кілька тижнів після початку дії договору я надсилаю на Вашу адресу лист. Я не знаю ні імені орендаря, ні нічого про договір, який Ви підписали. </p>
+              <p>Власник/агентство, яке здало вам житло, розмістили оголошення на популярних веб-сайтах житла, які я регулярно переглядаю. Ваше житло/квартира була позначена як житло з підозріло високою орендною платою. Я провів розрахунок і приблизно визначив максимальну орендну плату, яку ви бачите в листі. Якщо різниця між нею та поточною орендною платою знаходиться в межах прийнятної точності, я надсилаю листа на вашу адресу через кілька тижнів після початку контракту. Я не знаю імені орендаря чи нічого про контракт, який ви підписали. </p>
             </div>
           </div>
 
           <div class="accordion" id="a2">
-            <button type="button" class="accordionBtn">Я отримав від Вас листа, але не думаю, що Ви відправили його не на ту адресу. Я живу в студії площею 20 м2, а не в квартирі 55 м2.</button>
+            <button type="button" class="accordionBtn">Я щойно отримав вашого листа, в якому говориться, що з моїм контрактом може бути щось підозріле або незаконне, але не вказано що. Що зробив мій власник?</button>
             <div class="accordion-content">
-              <p>Приношу свої вибачення. У багатьох оголошеннях не вказується номер будинку і іноді я помиляюся в знаходженні літери будинку в багатоквартирних комплексах. Якщо хтось нещодавно заселився у ваш будинок, то лист, ймовірно, для нього. </p>
+              <p>У 2024 році я створив анонімну гарячу лінію/форму, через яку люди можуть повідомляти про орендні ситуації, які їх турбують. Якщо ситуація була достатньо підозрілою або якщо я вважав, що було виправдано зв'язатися з орендарем, я надіслав листа. З юридичних причин я уникаю занадто багато деталей у листі, оскільки часто трапляється, що власник/власниця перехоплюють ці листи, випадково чи навмисно. </p>
+            </div>
+          </div>
+
+          <div class="accordion" id="a2">
+            <button type="button" class="accordionBtn">Я власник. Чи можете ви мені допомогти з проблемою? Я обіцяю заплатити вам багато грошей, які я вкрав у всіх моїх орендарів.<p></p></button>
+            <div class="accordion-content">
+              <p>Ні. </p>
+            </div>
+          </div>
+
+          <div class="accordion" id="a2">
+            <button type="button" class="accordionBtn">Я щойно отримав вашого листа, але думаю, що ви надіслали його на неправильну адресу. Я живу в студії 20м2, а не в квартирі 55м2.</button>
+            <div class="accordion-content">
+              <p>Перепрошую за це. Багато оголошень не вказують номер будинку, і іноді я роблю помилки при знаходженні листа будинку в комплексах з кількома кімнатами. Якщо хтось нещодавно в'їхав у ваш будинок, лист, ймовірно, призначений для нього чи неї. </p>
             </div>
           </div>
 
           <div class="accordion" id="a3">
-            <button type="button" class="accordionBtn"><p>Як дізнатися, що це не шахрайство?</p></button>
+            <button type="button" class="accordionBtn">
+              <p>Як мені дізнатися, що це не шахрайство?</p>
+            </button>
             <div class="accordion-content">
-              <p>Rent Buster NL - зареєстрована компанія в Нідерландах з фіксованою адресою, веб-сайтом, голландським номером телефону. Я не прошу ніякої передоплати, беру на себе фінансовий ризик при кожній заявці на зниження орендної плати і можу підтвердити свою особу за допомогою відеодзвінка за запитом. В умовах нинішньої кризи на ринку оренди житла у великих голландських містах існують більш легкі методи обману людей: стати маклером / агентом з нерухомості - один з них. Я також міг би стати дилером NFT, але я скоріше зіграю в азартні ігри в палаючому казино.</p>
+              <p>Окрім багатьох новинних статей, написаних про мене, Rent Buster NL є зареєстрованою компанією в Нідерландах (номер KvK: 87138840), розташованою в Арнемі з нідерландським банківським рахунком і телефонним номером. Я пропоную безкоштовну консультацію через відеодзвінок. Ви не зобов'язані нічого підписувати/платити, і ви можете піти в будь-який момент.</p>
             </div>
           </div>
 
           <div class="accordion" id="a4">
-            <button type="button" class="accordionBtn">Чи існує база даних, яка підкаже мені, яка максимальна законна орендна плата за житло?</button>
+            <button type="button" class="accordionBtn">Чи існує база даних, яка показує максимальну законну орендну плату для адреси?</button>
             <div class="accordion-content">
-              <p>На жаль, ні, її потрібно розраховувати вручну. Вона залежить від багатьох факторів і змінюється щороку через коливання цін на житло, планування, енергетичного рейтингу тощо. Гементе в Роттердамі та Утрехті пропонують елементарний калькулятор на своїх веб-сайтах, але він розраховує лише можливий діапазон значень і лише в межах своїх міст.
-                <br> Посилання:
-                <a href="https://huurprijscalculator.rotterdam.nl/index.html" target="_blank" style="color: cornflowerblue;">Роттердам</a> ,
-                <a href="https://www.huurteam-utrecht.nl/en/rental-price-checker/" target="_blank" style="color: cornflowerblue;">Утрехт</a></p>
+              <p>На жаль, ні, її потрібно розраховувати вручну. Вона змінюється залежно від багатьох факторів і змінюється щороку через коливання цін на нерухомість, планування, енергетичну цінність тощо. Муніципалітети Роттердама та Утрехта пропонують рудиментарний калькулятор на своїх веб-сайтах, але вони розраховують лише можливий діапазон значень і тільки в межах своїх міст. Ви також можете використовувати мій калькулятор у верхній частині сторінки.
+                <br> Надані посилання:
+                <a href="https://huurprijscalculator.rotterdam.nl/index.html" target="_blank"
+                  style="color: cornflowerblue; --darkreader-inline-color: var(--darkreader-text-6495ed, #65a9ed);"
+                  data-darkreader-inline-color="">Rotterdam</a> ,
+                <a href="https://www.huurteam-utrecht.nl/en/rental-price-checker/" target="_blank"
+                  style="color: cornflowerblue; --darkreader-inline-color: var(--darkreader-text-6495ed, #65a9ed);"
+                  data-darkreader-inline-color="">Utrecht</a>
+              </p>
             </div>
           </div>
 
           <div class="accordion" id="a5">
-            <button type="button" class="accordionBtn">Я вважаю, що плачу занадто багато за свою кімнату/будинок/квартиру, але я місяцями шукав це місце, і я не хочу засмучувати власника і бути вигнаним за те, що створюю проблеми. Я краще доплачу, ніж втрачу це місце</button>
+            <button type="button" class="accordionBtn">Я думаю, що плачу занадто багато за свою кімнату/будинок/квартиру, але мені знадобилося місяці, щоб знайти це місце, і я не хочу роззлостити власника і бути вигнаним, бо я створюю проблеми. Я краще заплачу додатково, ніж втрачу це місце. Що станеться, якщо я подам скаргу?</button>
             <div class="accordion-content">
-              <p>Це цілком зрозуміло. Знайти житло в Нідерландах досить складно, і не виключено, що проведення цієї процедури зіпсує відносини між Вами і орендодавцем. Вам вирішувати, чи варта фінансова економія від зниження орендної плати (можливо, тисячі євро) ризику того, що орендодавець не продовжить з вами договір. Шукати нового орендаря незручно, і немає ніяких гарантій, що новий орендар буде готовий платити більш високу початкову ціну. Орендодавці, які були перед комісією з орендної плати кілька разів протягом 3 років, платять вищу плату кожного разу, коли вони програють справу: факти, які я доводжу до відома орендодавців, з якими я маю справу.
-                <br style="margin-bottom: 0.7rem;"> Також це стосується лише тих випадків, коли у Вас строковий договір (менше 2 років). Якщо у Вас безстроковий договір, то орендодавець не матиме права виселити Вас за оскарження орендної плати. Ви, швидше за все, зможете залишатися там стільки, скільки захочете. Якщо ж орендодавець спробує вас виселити, у вас буде цілий арсенал прав орендаря, якими ви можете скористатися, щоб запобігти виселенню. До тих пір, поки Ви тримаєте ніс чистим, у орендодавця не повинно бути причин, щоб виселити Вас, і вже точно не через те, що Ви скористалися своїми правами орендаря. 
-                </p>
+              <p>Це зрозуміло. Важко знайти орендне житло в Нідерландах, і можливо, що ця процедура погіршить стосунки між вами та власником. Якщо у вас тимчасовий контракт, можна зачекати, поки ваш контракт стане постійним, перед тим як розпочинати процедуру. Щоб уникнути зловживань, Комісія з оренди житла надає орендарям більше гнучкості щодо терміну подання заяви на зниження орендної плати (до шести місяців після закінчення тимчасового контракту). Коли ваш контракт стане постійним (або ви виїдете), все, що ви сплатили зайво, може бути вам повернено.
+                <br style="margin-bottom: 0.7rem;"> Це стосується тільки тоді, коли у вас контракт на певний строк (менше 2 років) і ви хочете залишитися довше. Якщо у вас контракт на певний строк і ви впевнені, що виїдете в кінці, ви не маєте додаткового ризику виселення. Якщо у вас контракт на невизначений строк, власник не може вас виселити за те, що ви оскаржуєте ціну оренди. Ви, ймовірно, можете залишатися стільки, скільки захочете. Якщо власник спробує вас виселити, у вас є арсенал прав орендаря, на які можна спертися, щоб запобігти виселенню. Поки ви поводитеся пристойно, не повинно бути причин, чому власник може вас виселити, і ТОЧНО НЕ за те, що ви скористалися своїми правами як орендар.
+
+              </p>
             </div>
           </div>
 
           <div class="accordion" id="a6">
-            <button type="button" class="accordionBtn">Гаразд, а який ваш інтерес у всьому цьому?</button>
+            <button type="button" class="accordionBtn">Гаразд, то в чому ваша мета в усьому цьому?</button>
             <div class="accordion-content">
-              <p> Я мав особистий досвід спілкування з недобросовісними орендодавцями, які завищують орендарям орендну плату. Мені не подобається, коли людей обманюють, і я хочу щось з цим зробити. Я працюю на пожертви від успішних справ, а справи коштують грошей. Я хочу займатися цим повний робочий день і, на жаль, я не є найманим працівником орендної організації. Ведення бізнесу та надсилання листів коштує грошей, і мені потрібно платити за оренду житла та харчуватися. Що стосується того, скільки, то це повністю залежить від вас. У разі успіху я можу заощаджувати вам тисячі євро на рік. Ви самі можете вирішити, скільки вам коштували мої послуги. Подібні організації, такі як "Бумаранг", вимагають великий шмат поселення в обмін на таку ж послугу. </p>
+              <p>У мене є особистий досвід спілкування з поганими власниками, які змушують орендарів платити занадто багато. Я не хочу бачити, як людей експлуатують, і хочу щось зробити з цим. На жаль, це не безкоштовно. Я хочу займатися цим на повний робочий день, і, на жаль, я не є найманим працівником орендної організації. Управління веб-сайтом, дослідження нерухомості та відправлення листів коштує грошей, і мені потрібно платити власну оренду і їсти. Кожна пожертва допомагає мені попередити наступного орендаря, який опинився в подібній ситуації, як і ви. Якщо ваш підхід до цієї угоди - "Нехай інші задихаються, я маю своє", тоді Rentbuster - не для вас. Щодо суми, ви визначаєте самі: я працюю з грошима, які ви жертвуєте з успішної угоди. Якщо я успішний, я можу заощадити вам тисячі євро на рік. Ви можете вирішити, скільки коштують для вас мої послуги. Майте на увазі, що подібні організації, як Bumarang, вимагають велику частину угоди (&gt;50%) в обмін на ті самі послуги. Жартівливі пожертви не приймаються і повертаються з принципу. Щодо рекомендацій щодо суми: дехто дає 10% від поверненої суми, інші - 5%, деякі - 1 місяць різниці між старою і новою орендною платою. </p>
             </div>
           </div>
 
-          <div class="accordion" id="a7">
-            <button type="button" class="accordionBtn">Чому я не можу просто звернутися в іншу організацію? Навіщо ви мені взагалі потрібні?</button>
-            <div class="accordion-content">
-              <p>
-                Дійсно, існує багато організацій, які можуть допомогти Вам у вирішенні проблем з орендодавцем. Деякі з них беруть за свої послуги високу плату. Вони також є реакційними: Вони лише реагують на запити, а не застосовують проактивний підхід, який використовує Rent Buster NL, шукаючи орендарів, які не підозрюють, що переплачують.
-                <br style="margin-bottom: 0.7rem;"> Звичайно, Ви цілком здатні побудувати власну справу проти Вашого орендодавця. Ви також можете самі вирощувати собі їжу, самі стригтися, самі ремонтувати свій автомобіль. Ці речі, як і все інше, потребують часу та енергії, щоб навчитися їх реалізовувати. Вам також доведеться боротися з іноді заплутаними і гіркими відносинами з Вашим орендодавцем, який, ймовірно, знає більше, ніж Ви, і може залякувати Вас порожніми погрозами. Ви можете зробити все це самостійно, але добре мати когось поруч, хто може дати пораду і допомогти Вам пройти через це. 
-                <br style="margin-bottom: 0.7rem;"> У довгостроковій перспективі зароблені гроші підуть на те, щоб дати мені можливість інформувати та запобігати обману інших щодо орендної плати, а також повернути рівень справедливості на голандський ринок житла. Частина грошей була використана для оплати листа, який ви отримали.
 
-                </p>
+          <div class="accordion">
+            <button type="button" class="accordionBtn">Чому б мені просто не звернутися до організації орендарів? Навіщо мені взагалі потрібен ви?</button>
+            <div class="accordion-content">
+              <p>Дійсно, є багато організацій, які можуть вам допомогти з вашим власником. Деякі стягують плату за свої послуги. Вони також реактивні: вони реагують лише на запити замість проактивного підходу Rent Buster NL до пошуку орендарів, які не знають, що платять занадто багато.
+                <br style="margin-bottom: 0.7rem;"> Звичайно, ви цілком здатні самостійно вести свою справу проти власника. Насправді, добре, що ви виявляєте таку ініціативу, бо чим більше людей це роблять, тим краще. Мої послуги призначені для тих, у кого немає часу, енергії чи знань, щоб займатися паперовою роботою, спілкуванням з власником чи необхідним дослідженням.
+              </p>
             </div>
           </div>
 
+          <div class="accordion">
+            <button type="button" class="accordionBtn">Ваш лист сказав мені, що я можливо сплатив нелегальну комісію посередника. Хіба це не нормально?</button>
+            <div class="accordion-content">
+              <p>Ні, це не нормально. Згідно з рішенням Верховного суду 2016 року, агенту з нерухомості заборонено представляти обидві сторони в контракті. Вони можуть приймати оплату тільки від сторони, яку вони представляють. Якщо ви знайшли оголошення про квартиру, в якій ви живете, на веб-сайті, це означає, що власник вже найняв послуги агента і може приймати оплату тільки від нього/неї. Усі витрати, які стягуються з орендаря, окрім орендної плати, заборонені. Це включає: гроші за ключі, адміністративні витрати, витрати на реєстрацію, витрати на контракт. Існує багато евфемізмів для цього. Більшість агентств більше не стягують ці платежі, але деякі все ще намагаються протягнути їх у транзакцію, особливо коли задіяні експати, які не знають правил. </p>
+            </div>
+          </div>
+
+
+          <div class="accordion">
+            <button type="button" class="accordionBtn">Що ви маєте на увазі, коли кажете 'busting/unbustable'?</button>
+            <div class="accordion-content">
+              <p>Busting - це процес зниження орендної плати за ваше житло через Комісію з оренди житла. Квартира/студія є bustable, якщо вона набирає менше 187 балів (липень 2024-червень 2025) або має очікувану нову орендну плату менше приблизно 1150 євро. Якщо вона велика (&gt;80m2) і дуже енергоефективна (маркування A), вона, ймовірно, набере занадто багато балів і буде Vrije Sector (Unbustable)</p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <button type="button" class="accordionBtn">Я шукаю bustable місце для проживання. Чи можете ви знайти місце для мене?</button>
+            <div class="accordion-content">
+              <p>На жаль, ні. Я - остання людина, яку ви хотіли б мати для пошуку місця. Можливо, я відомий деяким агентам з нерухомості, і я сумніваюся, що вони мають щось хороше сказати про мене. Якщо я буду питати про місце для проживання від вашого імені, вони, ймовірно, запідозрять, що я питав, щоб пізніше можна було зробити bust. Однак я пропоную щотижневий список потенційно bustable житла на моєму subreddit під назвою Hotsheets. Ви можете знайти посилання на мій subreddit внизу сторінки.</p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <button type="button" class="accordionBtn">Я повний новачок у питаннях житла в Нідерландах, що мені робити?</button>
+            <div class="accordion-content">
+              <p>Подзвоніть мені. Поки я не запустив Youtube-канал для відповідей на подібні питання, найкраще, що я можу запропонувати, - це розмова. Мені подобається відволікання. Більшу частину дня я проводжу, дивлячись на Excel-таблиці та оголошення Pararius.</p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <button type="button" class="accordionBtn">Моя квартира/студія не має енергетичного маркування. Чи це погано?</button>
+            <div class="accordion-content">
+              <p>Енергетичне маркування - це важливий документ, який вказує на енергоефективність вашої квартири/студії. Згідно з законом, власник зобов'язаний надати вам його, коли ви в'їжджаєте. Багато власників не мають цього документа, і з липня 2024 року вони можуть бути оштрафовані за це у справі Комісії з оренди житла, оскільки маркування, отримане після вашого в'їзду, виключається. Це може означати економію 200 євро на місяць на вашій орендній платі за цей недогляд. Верховний суд Нідерландів постановив у червні 2023 року, що це несправедливо по відношенню до власника, особливо якщо житло було енергоефективним, тому в принципі енергетичне маркування може бути включене, але це визначається в кожному окремому випадку. Я зверну вашу увагу на ризики, пов'язані з цим, під час вашої справи.</p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <button type="button" class="accordionBtn">Що таке COROP?</button>
+            <div class="accordion-content">
+              <p>COROP - це спеціальне позначення, яке отримують нові або капітально відремонтовані маленькі (&lt;40m2) квартири/студії в Амстердамі та Утрехті. Якщо ви живете в зовсім новому (побудованому після 2018 року) або дуже енергоефективному будинку (A+++), ваша орендна плата, ймовірно, unbustable. Звичайно, я перевірю, щоб переконатися, що воно підходить.
+              </p>
+            </div>
+
+            <div class="accordion">
+              <button type="button" class="accordionBtn">Мій контракт на оренду all-in. Що це означає?</button>
+              <div class="accordion-content">
+                <p>Я написав детальне повідомлення про те, як поводитися з вашим all-in контрактом тут <a
+                    href="https://www.reddit.com/r/Rentbusters/comments/1gj1o8f/the_allin_split_a_quick_and_effective_way_to/"
+                    target="_blank"
+                    style="color: cornflowerblue; --darkreader-inline-color: var(--darkreader-text-6495ed, #65a9ed);"
+                    data-darkreader-inline-color="">посилання </a> </p>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <button type="button" class="accordionBtn">Чи стає мій контракт вільного сектора регульованим/bustable після 1 липня 2024 року?</button>
+              <div class="accordion-content">
+                <p>1 липня 2024 року набув чинності Закон про доступну оренду (Wet Betaalbare Huur). Цей закон робить bustable приблизно 90% приватного орендного житла. Закон також має наслідки для орендарів, які в'їхали в своє житло Vrije Sector до 1 липня 2024 року. Якщо ви пропустили термін для busting свого житла, 1 липня 2025 року відкривається можливість, коли ви зможете попросити власника знизити вашу орендну плату, якщо ваше житло набирає &lt;144 бали згідно з поточними системами балів. Для всіх, хто підписав свій контракт 1 липня 2024 року або пізніше і хто могли пропустити можливість bust, ви також можете зробити bust свого житла, хоча вам не потрібно чекати до 1 липня 2025 року. У вас також набагато вищий ліміт балів (&lt;187 балів). Зв'язуйтеся зі мною без затримки. </p>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <button type="button" class="accordionBtn">Хто такий BPW і чому ви рекомендуєте мені стати членом?</button>
+              <div class="accordion-content">
+                <p>Bond Precaire Woonvormen (BPW) - це група захисту прав орендарів, яка втручається, щоб захистити орендарів, коли існує ризик насильства/залякування з боку власника у відповідь на справу про зниження орендної плати. Невеликі власники часто погано реагують на орендаря, який, на їхню думку, використовує закон для отримання зниження орендної плати. Я бачив випадки, коли орендарям загрожували вбивством, нападали, цькували і залякували їхні власники або їхні представники. Деякі великі власники, такі як Marcel van Hooijdonk, відомі такою поведінкою. BPW може допомогти, але їм потрібне завчасне сповіщення, щоб зібрати членів для вживання заходів. Хоча BPW також є волонтерською організацією, їм все одно потрібні гроші для функціонування, і мені особисто не подобається надсилати їм справи, де вже занадто пізно для ефективних дій, бо орендар ще не був членом. У деяких випадках я відмовлюся подавати вашу справу до Комісії з оренди житла, якщо вважаю, що існує обгрунтований ризик того, що власник вдасться до насильницької поведінки заради вашої безпеки, поки ви не станете членом BPW або не погодитеся, що я зв'яжуся з ними від вашого імені. Чим більш сумнівний і откровенно незаконний ваш контракт на оренду, тим більша ймовірність, що власник вдасться до таких дій. Я також рекомендую людям оформити страхування юридичного захисту з подібних причин. </p>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <button type="button" class="accordionBtn">Де я можу дізнатися більше про це? </button>
+              <div class="accordion-content">
+                <p>Перегляньте мій <a href="https://www.reddit.com/r/Rentbusters/" target="_blank"
+                    style="color: cornflowerblue; --darkreader-inline-color: var(--darkreader-text-6495ed, #65a9ed);"
+                    data-darkreader-inline-color="">subreddit </a> Я дуже активний там і публікую багато статей про оренду в Нідерландах. Я публікую різні статті, корисні калькулятори, поради щодо повернення сервісних витрат та гумористичний матеріал.</p>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
+
 
       <div class="line-animation-container">
         <div class="line"></div>
@@ -402,31 +462,85 @@
 
       <div class="blog" id="blog">
 
-        <h1 style="margin-top: 0rem">Останні новини</h1>
-
-      
-        <article class="article blog-post">
-            <a style="text-decoration: none;" href="https://www.reddit.com/r/NetherlandsHousing/comments/vwuphe/the_predatory_tenant_how_to_hunt_for_cheap/" target="_blank">
-              <img src="https://cdn.pixabay.com/photo/2018/04/13/21/24/lion-3317670_960_720.jpg" alt="" class="post-img">
+          <h1 style="margin-top: 0rem">Останні новини</h1>
+          <article class="article blog-post">
+            <a style="text-decoration: none;"
+              href="https://nltimes.nl/2023/03/25/netherlands-modern-day-robin-hood-helping-tenants-fight-greedy-landlords?utm_source=dlvr.it&amp;utm_medium=facebook"
+              target="_blank">
+              <img src="../img/NLtimes.png" alt="" class="post-img">
               <div class="post-content">
-                <h2 class="post-name">The predatory tenant: How to hunt for cheap accommodation and screw greedy landlords instead of the other way around</h2>
-                <p class="post-text">Netherlands has being going through a bit of a rough period with its housing market. The Dutch government is trying to reduce its nitrogen emissions and first t</p>
+                <h3 class="post-name">Сучасний Робін Гуд Нідерландів допомагає орендарям боротися з жадібними власниками (25 березня 2023)</h3>
+                <p class="post-text">Організація з Арнема нещодавно розпочала проактивний підхід до боротьби з безсовісною поведінкою нідерландських власників житла... t</p>
               </div>
             </a>
-        </article>
+          </article>
 
-        <article class="article blog-post">
-            <a style="text-decoration: none;" href="https://www.reddit.com/r/NetherlandsHousing/comments/vwuphe/the_predatory_tenant_how_to_hunt_for_cheap/" target="_blank">
-              <img src="https://www.holland.com/upload_mm/d/f/c/69557_fullimage_sint-servaas-brug-maas-maastricht-stad-eighty8things-1360%20copy.jpg" alt="" class="post-img">
+          <article class="article blog-post">
+            <a style="text-decoration: none;"
+              href="https://www.telegraaf.nl/nieuws/901671984/een-extreme-huur-van-1600-euro-per-maand-deze-robin-hood-halveert-m"
+              target="_blank">
+              <img src="../img/telegraaf.png" alt="" class="post-img">
               <div class="post-content">
-                <h2 class="post-name">9 things you wish you knew about renting in Maastricht and the Netherlands before you came here <br><br> </h2>
-                <p class="post-text">Many of the redditors/ facebook/ forum users who rent apartments and studios in the Netherlands seem to be afraid to bring up issues with the landlord that they fear might get them evicted or their contracts not renewed.</p>
+                <h3 class="post-name">Екстремальна орендна плата 1600 євро на місяць? Цей Робін Гуд зменшує її вдвічі (20 липня 2023)</h3>
+                <p class="post-text">Амстердам - Екстремальні ціни на оренду вже давно не є винятком. Багато людей насправді мають право на значне зниження орендної плати. Шейн Вайт зробив своєю місією домогтися цього. Це не завжди безпечно.... t</p>
               </div>
             </a>
-        </article>
+          </article>
 
-      </div>
+          <article class="article blog-post">
+            <a style="text-decoration: none;"
+              href="https://www.telegraaf.nl/nieuws/901671984/een-extreme-huur-van-1600-euro-per-maand-deze-robin-hood-halveert-m"
+              target="_blank">
+              <img src="../img/Trouw.png" alt="" class="post-img">
+              <div class="post-content">
+                <h3 class="post-name">Шейн бореться з рентьєрами. "Я працюю не стільки для бідних, скільки проти багатих" (13 липня 2023)</h3>
+                <p class="post-text">Приватні власники часто запитують занадто багато за оренду. Ірландець Шейн Вайт зробив своєю місією допомогу мешканцям у процедурі зниження орендної плати.. t</p>
+              </div>
+            </a>
+          </article>
 
+
+          <article class="article blog-post">
+            <a style="text-decoration: none;"
+              href="https://www.ad.nl/binnenland/jackie-wist-huur-te-verlagen-van-800-naar-350-euro-per-maand-maar-voel-me-niet-meer-veilig~afa279c1/"
+              target="_blank">
+              <img src="../img/ad.png" alt="" class="post-img">
+              <div class="post-content">
+                <h3 class="post-name">Джекі вдалося знизити орендну плату з 800 до 350 євро на місяць</h3>
+                <p class="post-text">Напружений ринок житла змушує орендарів робити дивні речі. Ті, хто шукає житло, тепер навіть шукають занадто дороге житло, щоб потім швидко домогтися зниження орендної плати.. t</p>
+              </div>
+            </a>
+          </article>
+
+
+          <article class="article blog-post">
+            <a style="text-decoration: none;"
+              href="https://www.reddit.com/r/NetherlandsHousing/comments/vwuphe/the_predatory_tenant_how_to_hunt_for_cheap/"
+              target="_blank">
+              <img
+                src="../img/69557_fullimage_sint-servaas-brug-maas-maastricht-stad-eighty8things-1360 copy.jpg"
+                alt="" class="post-img">
+              <div class="post-content">
+                <h3 class="post-name">9 речей, які ви хотіли б знати про оренду в Маастріхті та Нідерландах перед тим, як приїхати <br><br> </h3>
+                <p class="post-text">Багато користувачів reddit/facebook/форумів, які орендують квартири та студії в Нідерландах, здається, бояться порушувати проблеми з власником через страх бути виселеними або непродовження контракту.</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="article blog-post">
+            <a style="text-decoration: none;"
+              href="https://new.reddit.com/r/Rentbusters/comments/11t9nmh/another_motivating_reason_to_get_your_rent/"
+              target="_blank">
+              <img src="../img/IMG_9966.jpg" alt="" class="post-img">
+              <div class="post-content">
+                <h3 class="post-name">Rentbusting може допомогти вам отримати Huurtoeslag (дотацію на оренду) <br><br> </h3>
+                <p class="post-text">Huurtoeslag можливий лише якщо ви платите базову орендну плату &lt;879 євро на місяць. Отримання зниження орендної плати дозволяє вам подати заявку на неї.</p>
+              </div>
+            </a>
+          </article>
+
+
+        </div>
 
 
       <div class="line-animation-container">
@@ -437,42 +551,45 @@
       <div class="contact-us" id="contact-us">
         <div class="contact-form">
           <h2>Зв'язатися з нами</h2>
-          <p>Заповніть форму і ми зв'яжемося з вами найближчим часом. Після відправлення вас перенесе на сторінку з капчею для запобігання спаму</p>
+          <p>Заповніть форму, і ми незабаром зв'яжемося з вами. Після відправлення вас буде переспрямовано на сторінку з captcha для запобігання спаму.</p>
 
           <form action="https://formspree.io/f/xoqbjbnv" method="POST" id="form">
+            <div class="group">
+              <div class="empty-space"></div>
+              <input type="text" name="firstName" id="firstName" placeholder="Ім'я" class="form-element" required>
+            </div>
+
+            <div class="group">
+              <div class="empty-space"></div>
+              <input type="text" name="secondName" id="secondName" placeholder="Прізвище" class="form-element"
+                required>
+            </div>
+
+            <div class="group">
+              <div class="empty-space"></div>
+              <input type="email" name="email" id="email" placeholder="E-mail" class="form-element" required>
+            </div>
+
+            <div class="group">
+              <div class="empty-space"></div>
+              <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Номер телефону" class="form-element"
+                required>
+            </div>
+
+
+            <div class="full">
               <div class="group">
-                <div class="empty-space"></div>
-                <input type="text" name="firstName" id="firstName" placeholder="Ім'я" class="form-element" required>
+                <div class="empty-space-big"></div>
+                <textarea name="message" id="message" class="form-element" placeholder="Ваше повідомлення"
+                  spellcheck="false"></textarea>
               </div>
-              
-              <div class="group">
-                <div class="empty-space"></div>
-                <input type="text" name="secondName" id="secondName" placeholder="Прізвище" class="form-element" required>
-              </div>
+            </div>
 
-              <div class="group">
-                <div class="empty-space"></div>
-                <input type="email" name="email" id="email" placeholder="Електронна пошта" class="form-element" required>
-              </div>
+            <br>
 
-              <div class="group">
-                <div class="empty-space"></div>
-                <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Номер телефону" class="form-element" required>
-              </div>
-
-
-              <div class="full">
-                <div class="group">
-                  <div class="empty-space-big"></div>
-                <textarea name="message" id="message" class="form-element" placeholder="Ваше повідомлення" spellcheck="false"></textarea>
-                </div>
-              </div>
-
-              <br>
-
-              <div class="submit">
-                <input type="submit" value="Надіслати">
-              </div>
+            <div class="submit">
+              <input type="submit" value="Надіслати">
+            </div>
 
           </form>
         </div>
@@ -487,67 +604,86 @@
           <div class="footer-column" id="info-footer">
             <h4>Контакти</h4>
             <ul>
-              <li><p>Телефон:&#10240<span class="break"></span>+31 681261764</p></li>
-              <li><p>Whatsapp:&#10240<span class="break"></span>+31 681261764</p></li>
-              <li><p>Електронна пошта:&#10240<span class="break"></span>info(собака)rentbuster(крапка)nl</p></li>
-              <li><p>KvK:&#10240<span class="break"></span>87138840</p></li>
-              <li><p>Номер банківського рахунку:&#10240<span class="break"></span>NL80INGB0755908910</p></li>
+              <li>
+                <p>Контактний телефон:&#10240<span class="break"></span>+31 681261764</p>
+              </li>
+              <li>
+                <p>Whatsapp:&#10240<span class="break"></span>+31 681261764</p>
+              </li>
+              <li>
+                <p>E-mail:&#10240<span class="break"></span>info(at)rentbuster(dot)nl</p>
+              </li>
+              <li>
+                <p>KvK:&#10240<span class="break"></span>87138840</p>
+              </li>
+              <li>
+                <p>Номер банківського рахунку:&#10240<span class="break"></span>NL80INGB0755908910</p>
+              </li>
             </ul>
           </div>
 
           <div class="footer-column">
             <h4>Соціальні мережі</h4>
             <div class="social-media">
-              <a href="https://www.reddit.com/r/Rentbusters/" target="_blank"><img src="../img/reddit-logo.png" alt="reddit-icon" class="reddit-icon"></a>
-              <a href="https://www.facebook.com/profile.php?id=100085087598391" target="_blank"><img src="../img/facebook-icon.png" alt="facebook-icon" class="facebook-icon"></a>
-			        <a href="https://www.youtube.com/channel/UCjg0X1ZwTVahyRfkCr2OkNg" target="_blank"><img src="../img/youtube-logo.png" alt="youtube-icon" class="youtube-icon"></a>
+              <a href="https://www.reddit.com/r/Rentbusters/" target="_blank"><img src="../img/reddit-logo.png"
+                  alt="reddit-icon" class="reddit-icon"></a>
+              <a href="https://www.facebook.com/profile.php?id=100085087598391" target="_blank"><img
+                  src="../img/facebook-icon.png" alt="facebook-icon" class="facebook-icon"></a>
+              <a href="https://www.youtube.com/channel/UCjg0X1ZwTVahyRfkCr2OkNg" target="_blank"><img
+                  src="../img/youtube-logo.png" alt="youtube-icon" class="youtube-icon"></a>
             </div>
           </div>
         </div>
       </div>
-      <a href="/Privacyverklaring.pdf" target="_blank" class="footer-document">Privacyverklaring - © <script type="text/javascript">document.write( new Date().getFullYear() )</script> RentBusterNL</a>
-      <a href="https://lifeconsciousness.github.io/Contact_page/" target="_blank" class="credit">Made by Maksym Tovstolis</a>
+      <a href="/Privacyverklaring.pdf" target="_blank" class="footer-document">Privacyverklaring - ©
+        <script type="text/javascript">document.write(new Date().getFullYear())</script> RentBusterNL
+      </a>
+      <!-- <a href="https://lifeconsciousness.github.io/Contact_page/" target="_blank" class="credit">Made by Maksym Tovstolis</a> -->
     </footer>
 
-    <script>
-      //dark theme toggle
-      let icon = document.getElementById("moon");
-      let iconNavbar = document.getElementById("moon-navbar");
-
-        icon.onclick = function(){
-            document.body.classList.toggle("dark-theme");   
-            if(document.body.classList.contains("dark-theme")){
-                icon.src = "../img/sun.png";
-                iconNavbar.src = "../img/sun.png";
-            }else{
-                icon.src = "../img/moon.png";
-                iconNavbar.src = "../img/moon.png";
-            }     
-        }
-
-        iconNavbar.onclick = function(){
-            document.body.classList.toggle("dark-theme");   
-            if(document.body.classList.contains("dark-theme")){
-                iconNavbar.src = "../img/sun.png";
-                icon.src = "../img/sun.png";
-            }else{
-                iconNavbar.src = "../img/moon.png";
-                icon.src = "../img/moon.png";
-            }     
-        }
-    </script>
-
-    <script src="../script.js"></script>
     <!-- <script src="../js/carousel.js"></script> -->
     <script src="../js/cursor.js"></script>
     <script src="../js/navbar.js"></script>
 
-
   </div>
 
+  <script src="../script.js"></script>
+
   <script>
+    //dark theme toggle
+    let icon = document.getElementById("moon");
+    let iconNavbar = document.getElementById("moon-navbar");
+
+    icon.onclick = function () {
+      document.body.classList.toggle("dark-theme");
+      if (document.body.classList.contains("dark-theme")) {
+        icon.src = "../img/sun.png";
+        iconNavbar.src = "../img/sun.png";
+      } else {
+        icon.src = "../img/moon.png";
+        iconNavbar.src = "../img/moon.png";
+      }
+    }
+
+    iconNavbar.onclick = function () {
+      document.body.classList.toggle("dark-theme");
+      if (document.body.classList.contains("dark-theme")) {
+        iconNavbar.src = "../img/sun.png";
+        icon.src = "../img/sun.png";
+      } else {
+        iconNavbar.src = "../img/moon.png";
+        icon.src = "../img/moon.png";
+      }
+    }
+  </script>
+
+  <!-- <script>
     const website = document.querySelector('.website');
     const consentPopup = document.querySelector('.consent-popup');
+
+    website.style.display = 'block';
+        consentPopup.style.display = 'none';
+
     if(localStorage.getItem('cookieChoice') === '0' ){
       website.style.display = 'block';
       consentPopup.style.display = 'none';
@@ -558,6 +694,7 @@
         consentPopup.style.display = 'none';
       });
     }
-  </script>
-  </body>
+  </script> -->
+</body>
+
 </html>

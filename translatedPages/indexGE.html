@@ -1,60 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <!-- Description that will appear in the list of websites in search-->
-    <meta name="description" content="" />
-    <meta
-      name="keywords"
-      content="rent, rent reduction, low rental cost, service costs, rent Netherlands, rent Nederland, rent price, "
-    />
-    <title>Rent Buster</title>
-    <link rel="stylesheet" href="../css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="/favicon.ico">
 
-    <style>
-      .selected-lang{
-        cursor: pointer;
-        font-family: 'Inter', sans-serif;
-        display: flex;
-        justify-content: space-between;
-        font-size: 0.9rem;
-        line-height: 1.55;
-        width: 55px;
-        margin-bottom: 0.4rem;
-      }
-      
-      .selected-lang::before{
-          content: '';
-          display: block;
-          width: 32px;
-          height: 22.5px;
-          background-image: url(https://www.worldometers.info/img/flags/small/tn_gm-flag.gif);
-          background-size: 85%;
-          width: 2.8rem;
-      }
-    </style>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <!-- Description that will appear in the list of websites in search-->
+  <meta name="description" content="" />
+  <meta name="keywords"
+    content="rent, rent reduction, low rental cost, service costs, rent Netherlands, rent Nederland, rent price, " />
+  <title>Rent Buster</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet" />
+  <link rel="icon" href="/favicon.ico">
 
-  </head>
-  <body>
-    <!-- Cookies consent popup -->
+  <style>
+    .selected-lang {
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      line-height: 1.55;
+      width: 55px;
+      margin-bottom: 0.4rem;
+    }
 
-    <div class="consent-popup">
+    .selected-lang::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 22.5px;
+      background-image: url(https://www.worldometers.info/img/flags/nl-flag.gif);
+      background-size: 76%;
+      width: 2.8rem;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Cookies consent popup -->
+
+  <!-- <div class="consent-popup">
       <div class="info">
-        <p>Durch die Nutzung dieser Website stimmen Sie unseren Cookies zu. </p>
+
+        <p>Door gebruik te maken van deze website gaat u akkoord met onze cookies.</p>
         <button class="load-button">Ok</button>
       </div>
-    </div>
+    </div> -->
 
-    
 
-    <div class="website">
+
+  <div class="website" style="display: block;">
 
     <!-- Loader -->
 
@@ -70,16 +69,10 @@
       </div>
     </div>
 
-
-
-    <header class="header" id = "header">
+    <header class="header" id="header">
       <div class="navbar-wrapper">
         <!-- Logo -->
-        <a href="#home"
-          ><img
-            src="../img/LOGO_cropped.png"
-            alt="RentBuster logo"
-        /></a>
+        <a href="#home"><img src="../img/LOGO_cropped.png" alt="RentBuster logo" /></a>
 
         <!-- Navbar button for mobile -->
         <button class="mobile-navbar-toggle" aria-expanded="false"></button>
@@ -88,16 +81,17 @@
         <!-- Navigation bar -->
         <nav>
           <ul id="navbar" class="navbar" data-visible="false">
-            <li class="active"><a href="#home" class="underline-animation">Hauptseite</a></li>
+            <li class="active"><a href="#home" class="underline-animation">Home</a></li>
             <li class="active"><a href="#about-us" class="underline-animation">Über uns</a></li>
             <li class="active"><a href="#how-we-work" class="underline-animation">Wie wir arbeiten</a></li>
             <li class="active"><a href="#faq" class="underline-animation">FAQ</a></li>
             <li class="active"><a href="#blog" class="underline-animation">Blog</a></li>
-            <li class="active"><a href="#contact-us" class="underline-animation">Kontakt</a></li>
-            
+            <li class="active"><a href="#contact-us" class="underline-animation">Kontaktieren Sie uns</a></li>
+
             <li class="active">
-              <a href="https://www.patreon.com/user?u=83272391" target="_blank" class="underline-animation donate-btn">Donate
-                <div class="donate-shadow" style="margin-right: 25px;"></div>
+              <a href="https://www.patreon.com/user?u=83272391" target="_blank"
+                class="underline-animation donate-btn">Spenden
+                <div class="donate-shadow"></div>
               </a>
             </li>
 
@@ -126,54 +120,19 @@
     </header>
 
     <!-- Cursor trail -->
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="goo"
-      version="1.1"
-      width="100%"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" class="goo" version="1.1" width="100%">
       <defs>
         <filter id="goo">
-          <feGaussianBlur
-            in="SourceGraphic"
-            stdDeviation="6"
-            result="blur"
-          ></feGaussianBlur>
-          <feColorMatrix
-            in="blur"
-            mode="matrix"
-            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15"
-            result="goo"
-          ></feColorMatrix>
-          <feComposite
-            in="SourceGraphic"
-            in2="goo"
-            operator="atop"
-          ></feComposite>
+          <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"></feGaussianBlur>
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15" result="goo">
+          </feColorMatrix>
+          <feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite>
         </filter>
       </defs>
     </svg>
 
     <div id="cursor"></div>
 
-    <!-- Shortcut to the news section -->
-
-    <a href="#blog" class="appearing-anim">
-      <p class="latest-news">
-
-        <span class="animated-text">
-          Lesen Sie unsere neuesten Nachrichtenartikel
-        </span>
-
-        <span class="particles">
-          <span class="particle">
-            <svg viewBox="0 0 512 512">
-            <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
-            </svg>
-          </span>
-        </span> 
-      </p>
-    </a>
 
 
     <main id="body">
@@ -184,100 +143,111 @@
 
       <!-- HOME SECTION -->
       <div class="home-wrapper">
-      <div id="home" class="home anim-container">
-        <div class="text-container-home">
-          <h1 class="animated ">If the rent's too high,</h1>
-          <h1 class="animated ">In the neighbourhood,</h1>
-          <h1 class="animated ">Who you gonna call?</h1>
-          <img class="animated" src="../img/LOGO_cropped.png" alt="rentbuster logo">
-          <!-- <h2>RENT BUSTER!</h2> -->
-          <!-- <img class="animated fadeInLeft" src="/img/RentBuster logo without background.png" alt="rentbuster logo"> -->
+        <div id="home" class="home anim-container" style="justify-content: center;">
+          <div class="text-container-home">
+            <h1 class="animated text1">If the rent's too high,</h1>
+            <h1 class="animated text2">In the neighbourhood,</h1>
+            <h1 class="animated text3">Who you gonna call?</h1>
+            <!-- <h1 class="animated fadeIn1">If the rent's too high,</h1>
+            <h1 class="animated fadeIn2">In the neighbourhood,</h1>
+            <h1 class="animated fadeIn3">Who you gonna call?</h1> -->
+            <img class="animated logo-home-section" src="../img/LOGO_cropped.png" alt="rentbuster logo">
+            <!-- <h2>RENT BUSTER!</h2> -->
+            <!-- <img class="animated fadeInLeft" src="/img/RentBuster logo without background.png" alt="rentbuster logo"> -->
+          </div>
+          <div class="video-wrapper" style="display: none;">
+            <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/xwSltGbK46E"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen=""></iframe>
+          </div>
+
         </div>
-        
-        <div class="video-wrapper">
-          <iframe
-            class="youtube-video"
-            width="560"
-            height="315"
-            src=""
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-        
-      </div>
       </div>
 
-      <div class="line-animation-container-first">
-        <div class="line"></div>
-      </div>
+      <!-- Shortcut to the news section -->
+      <a href="https://calculator.rentbuster.nl" target="_blank" class="appearing-anim">
+        <p class="latest-news">
 
+          <span class="animated-text"
+            style="color: rgb(92, 92, 255); --darkreader-inline-color: var(--darkreader-text-5c5cff, #5a96ff);"
+            data-darkreader-inline-color="">
+            Probieren Sie unseren neuen Mietrechner
+          </span>
+
+          <span class="particles">
+            <span class="particle">
+              <svg viewBox="0 0 512 512">
+                <path
+                  d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z">
+                </path>
+              </svg>
+            </span>
+          </span>
+        </p>
+      </a>
 
       <!-- ABOUT US SECTION -->
-      <div class="about-us-container" id="about-us">
-        <h1>Über uns</h1>
-      <div class="about-us">
-        <div class="text-wrapper" id="text-wrapper">
-          <p style="margin-bottom: 10px; margin-top: 7px;">
-           Rent Buster NL wurde 2022 als Reaktion auf die niederländische Wohnungsnot und den Anstieg der Mietpreise gegründet. Wir suchen und warnen Mieter, die in neue Wohnungen/Studios/Zimmer in den in den Niederlanden bezogen haben, darauf aufmerksam, dass ihr Vermieter möglicherweise zu viel von ihnen verlangt. </p>
-          <p style="margin: 0;">
-            In den Großstädten herrscht zwar ein massiver Wohnungsmangel, doch ein großer Teil des Mietmarktes unterliegt strengen Preiskontrollen, um sicherzustellen, dass die Grundversorgung mit Wohnraum bezahlbar ist. Vermieter und Immobilienmakler ignorieren diese Preiskontrollen regelmäßig und treiben die Preise für Wohnraum in die Höhe. Die Mieter wissen häufig nicht, dass sie ein Recht auf Mietminderung/Gebührenerstattung haben, oder sie scheuen sich aus Angst vor einer Zwangsräumung, dagegen vorzugehen. 
+      <div class="about-us-container" id="about-us" style="margin-top: 0;">
+        <h1>Über mich</h1>
+        <div class="about-us">
+          <div class="text-wrapper" id="text-wrapper">
+            <p style="margin-bottom: 10px; margin-top: 7px;">
+              Hallo. Mein Name ist Shane. Ich lebe seit 14 Jahren in den Niederlanden und miete, wie viele andere auch, mein Haus von einem Vermieter. Ich habe Rent Buster NL im Jahr 2022 gegründet, nachdem ich mit eigenen Augen die lächerlichen Mietpreise gesehen habe, die von Maklern/Vermietern als Reaktion auf den niederländischen Wohnungsmangel verlangt wurden. Mein Ziel ist es, Mieter aufzuspüren und zu warnen, die in neue Wohnungen/Studios/Zimmer in den Niederlanden gezogen sind, dass ihr Vermieter möglicherweise zu viel von ihnen verlangt.
+            </p>
+            <p style="margin: 0;">
+              Obwohl es in den Großstädten einen enormen Wohnungsmangel gibt, unterliegt ein großer Teil des Mietmarktes nach wie vor der Mietpreisbindung, um bezahlbaren Wohnraum zu gewährleisten. Einige Vermieter und Makler ignorieren diese Preiskontrollen und treiben die verlangten Mietpreise für Wohnungen grob in die Höhe. Mieter sind sich oft nicht ihrer Rechte auf Mietminderung/Kostenerstattung bewusst oder haben zu viel Angst, Maßnahmen zu ergreifen aus Furcht vor Zwangsräumung, und zahlen weiterhin jährlich Tausende von Euro zu viel.
+            </p>
+            <p style="margin-top: 10px; margin-bottom: 0;">
+              Ich bemühe mich, so viele dieser Mieter wie möglich über soziale Medien und Post zu informieren und zu helfen. Wenn Sie einen Brief von mir erhalten haben, zahlen Sie wahrscheinlich zu viel. Schauen Sie sich unsere FAQ für weitere Informationen an oder senden Sie mir eine Nachricht für Hilfe.
+            </p>
+            <p style="margin-top: 10px; margin-bottom: 0;">
+            </p>
+            <p></p>
+          </div>
 
-Übersetzt mit www.DeepL.com/Translator (kostenlose Version)
-          </p>
-          <p style="margin-top: 10px; margin-bottom: 0;">
-            Rent Buster NL will möglichst viele dieser Mieterinnen und Mieter informieren und ihnen helfen. Wenn Sie ein Schreiben von uns erhalten haben, dann zahlen Sie wahrscheinlich zu viel. Weitere Informationen finden Sie in unseren FAQ oder kontaktieren Sie uns für eine kostenlose Beratung.</p>
-        </div>
 
-        <!-- This is the image slider. To add a new picture you neen to
+
+
+
+          <!-- This is the image slider. To add a new picture you neen to
         copy li with class slide and change the path to the picture
         also you need to create another button (carousel indicator) -->
-        <div class="carousel">
-          <button class="carouselBtn carouselBtn-left">
-            <img src="../img/left-arrow-next.svg" alt="left-arrow-next" />
-          </button>
+          <div class="carousel">
+            <button class="carouselBtn carouselBtn-left">
+              <img src="../img/left-arrow-next.svg" alt="left-arrow-next">
+            </button>
 
-          <div class="carousel-track-container">
-            <ul class="carousel-track">
-              <li class="slide current-slide">
-                <img
-                  class="carousel-image"
-                  src="../img/Me.jpg"
-                  alt=""
-                />
-              </li>
-              <li class="slide">
-                <img
-                  class="carousel-image"
-                  src="../img/letter.png"
-                  alt=""
-                />
-              </li>
-              <li class="slide">
-                <img
-                  class="carousel-image"
-                  src="../img/Letters.jpg"
-                  alt=""
-                />
-              </li>
-              
-            </ul>
-          </div>
+            <div class="carousel-track-container">
+              <ul class="carousel-track" style="transform: translateX(0px);">
+                <li class="slide current-slide" style="left: 0px;">
+                  <img class="carousel-image" src="../img/Me.jpg" alt="">
+                </li>
+                <li class="slide" style="left: 590.398px;">
+                  <img class="carousel-image" src="../img/letter.png" alt="">
+                </li>
+                <li class="slide" style="left: 1180.8px;">
+                  <img class="carousel-image" src="../img/Letters.jpg" alt="">
+                </li>
 
-          <button class="carouselBtn carouselBtn-right">
-            <img src="../img/right-arrow-next.svg" alt="right-arrow-next" />
-          </button>
+              </ul>
+            </div>
 
-          <div class="carousel-nav">
-            <button class="carousel-indicator current-slide"></button>
-            <button class="carousel-indicator"></button>
-            <button class="carousel-indicator"></button>
+            <button class="carouselBtn carouselBtn-right">
+              <img src="../img/right-arrow-next.svg" alt="right-arrow-next">
+            </button>
+
+            <div class="carousel-nav">
+              <button class="carousel-indicator current-slide"></button>
+              <button class="carousel-indicator"></button>
+              <button class="carousel-indicator"></button>
+            </div>
           </div>
         </div>
       </div>
-      </div>
+
+
+
 
       <div class="line-animation-container">
         <div class="line"></div>
@@ -288,107 +258,203 @@
         <div class="hww-container ">
           <h1>Wie wir arbeiten</h1>
 
-        <div class="picture-and-text">
-          <div class="hww-img" id="firstImg"></div>
-          <p class="hww-text " id="firstText">Wenn Sie ein Schreiben von RentBuster erhalten haben und davon überzeugt sind, dass Sie möglicherweise zu viel zahlen, wird Rent Buster NL Ihren Fall dem Vermieter vortragen und in Ihrem Namen über eine Mietminderung verhandeln. In manchen Fällen ist dieser Schritt nicht erforderlich, aber es ist hilfreich, eine diplomatische Lösung zu finden, bevor Sie sich an die Huurcommissie wenden.</p>
-        </div>
+          <div class="picture-and-text">
+            <div class="hww-img" id="firstImg"></div>
+            <p class="hww-text " id="firstText">Wenn Sie einen Brief von RentBuster erhalten haben und davon überzeugt sind, dass Sie möglicherweise zu viel zahlen, wird Rent Buster NL Ihren Fall dem Vermieter vorlegen und in Ihrem Namen über eine niedrigere Miete verhandeln. Dies ist in einigen Fällen kein erforderlicher Schritt, aber es ist nützlich, eine diplomatische Lösung zu suchen, bevor Sie die Huurcommissie (Mietkommission) kontaktieren.</p>
+          </div>
 
-        <div class="picture-and-text">
-          <!-- <img src="/img/left-arrow-next.svg" class="hidden-image1" alt=""> -->
-          <div class="hidden-image1 hww-img"></div>
-          <p class="hww-text" id="secondText">Sollte der Vermieter nicht auf unsere Anfrage antworten oder sollten Sie mit seinem Gegenangebot nicht einverstanden sein, werden wir unseren Fall bei der Huurcommissie weiterverfolgen. Rent Buster kümmert sich um alle Formalitäten/Kosten mit der Huurcommissie und hält Sie über alle Entwicklungen auf dem Laufenden.  </p>
-          <div class="hww-img hide-image" id="secondImg"></div>
-        </div>
+          <div class="picture-and-text">
+            <!-- <img src="/img/left-arrow-next.svg" class="hidden-image1" alt=""> -->
+            <div class="hidden-image1 hww-img"></div>
+            <p class="hww-text" id="secondText">Wenn der Vermieter nicht auf unsere Anfrage reagiert oder wenn Sie mit seinem/ihrem Gegenangebot nicht einverstanden sind, werden wir den Fall bei der Huurcommissie fortsetzen. Rent Buster kümmert sich um den Papierkram und die Kosten bei der Huurcommissie und hält Sie über die Entwicklungen auf dem Laufenden. </p>
+            <div class="hww-img hide-image" id="secondImg"></div>
+          </div>
 
-        <div class="picture-and-text">
-          <div class="hww-img " id="fourthImg"></div>
-          <p class="hww-text " id="thirdText">Obwohl ich mein Bestes tue, um den korrekten ungefähren Mietpreis vor unserer Kontakt-E-Mail zu bestimmen, kann es zunächst notwendig sein, eine unabhängige Messung/Bewertung Ihrer Wohnung/Ihres Zimmers/Studios vorzunehmen, um den Mietpreis genau zu berechnen, insbesondere wenn es sich um eine Wohnung nahe der Liberalisierungsgrenze handelt. Außerdem muss ich Ihren Vertrag prüfen, um den Antrag zu vervollständigen.</p>
-        </div>
+          <div class="picture-and-text">
+            <div class="hww-img " id="thirdImg"></div>
+            <p class="hww-text " id="thirdText">Obwohl ich mein Bestes tue, um vor unserer Kontaktaufnahme den richtigen geschätzten Mietpreis zu ermitteln, kann es zunächst erforderlich sein, eine unabhängige Vermessung/Bewertung Ihrer Wohnung/Ihres Zimmers/Studios durchzuführen, um die Miete genau zu berechnen, insbesondere wenn sie nahe an der Liberalisierungsgrenze liegt. Ich muss auch Ihren Vertrag einsehen, um den Antrag abzuschließen.</p>
+          </div>
 
-        <div class="picture-and-text">
-          <div class="hidden-image2 hww-img"></div>
-          <p class="hww-text " id="fourthText">Im Falle eines positiven Urteils der Huurcommissie ist der Vermieter gezwungen, Ihre Miete zu senken UND Ihnen den zu viel gezahlten Betrag seit Beginn Ihres Vertrags/Antrags zu erstatten.</p>
-          <div class="hww-img hide-image" id="thirdImg"></div>
-        </div> 
+          <div class="picture-and-text">
+            <div class="hidden-image2 hww-img"></div>
+            <p class="hww-text " id="fourthText">Im Falle einer günstigen Entscheidung der Huurcommissie ist der Vermieter verpflichtet, Ihre Miete zu senken und Ihnen den zu viel gezahlten Betrag seit Beginn Ihres Vertrags/Antrags zurückzuerstatten.</p>
+            <div class="hww-img hide-image" id="fourthImg"></div>
+          </div>
 
         </div>
       </div>
 
       <div class="line-animation-container">
         <div class="line"></div>
-      </div> 
+      </div>
 
       <!-- If you want to justify text in questions find .accordionBtn in scss file and uncomment text-align: justify -->
       <!-- FAQ SECTION -->
       <div class="faq" id="faq">
-        <h2>FAQ</h1>
+        <h2>FAQ</h2>
         <div class="faq-container">
           <div class="accordion" id="a1">
-            <button type="button" class="accordionBtn"><p> Ich habe gerade einen Brief bekommen. Woher wissen Sie, dass ich hier wohne und wie hoch meine Miete ist? Das macht mich paranoid</p></button>
+            <button type="button" class="accordionBtn">
+              <p> Ich habe gerade einen Brief bekommen. Woher wissen Sie, dass ich hier wohne und wie hoch meine Miete ist? </p>
+            </button>
             <div class="accordion-content">
-<p>Der Vermieter/die Agentur, der/die die Wohnung an Sie vermietet hat, hat Anzeigen auf beliebten Wohnungs-Websites geschaltet, die ich regelmäßig überprüfe. Ihr Haus/Ihre Wohnung wurde als verdächtig hoch eingestuft. Ich habe eine Berechnung durchgeführt und eine ungefähre Höchstmiete ermittelt, die Sie in diesem Schreiben sehen. Wenn die Differenz zwischen diesem und dem aktuellen Mietpreis innerhalb eines akzeptablen Genauigkeitsgrades liegt, sende ich Ihnen einige Wochen nach Vertragsbeginn einen Brief an Ihre Adresse. Ich kenne weder den Namen des Mieters noch etwas über den von Ihnen unterzeichneten Vertrag. </p>            </div>
+              <p>Der Vermieter/die Agentur, die Ihnen die Unterkunft vermietet hat, hat Anzeigen auf beliebten Wohnungswebsites geschaltet, die ich regelmäßig überprüfe. Ihr Haus/Ihre Wohnung wurde als verdächtig hohe Miete gekennzeichnet. Ich habe eine Berechnung durchgeführt und einen ungefähren maximalen Mietpreis ermittelt, den Sie im Brief sehen. Wenn die Differenz zwischen diesem und dem aktuellen Mietpreis innerhalb eines akzeptablen Genauigkeitsniveaus liegt, sende ich einige Wochen nach Vertragsbeginn einen Brief an Ihre Adresse. Ich kenne den Namen des Mieters nicht oder irgendetwas über den Vertrag, den Sie unterschrieben haben. </p>
+            </div>
           </div>
 
           <div class="accordion" id="a2">
-            <button type="button" class="accordionBtn">Ich habe gerade einen Brief von Ihnen erhalten, aber ich glaube, dass Sie ihn an die falsche Adresse geschickt haben. Ich wohne in einem 20 m2 großen Studio, nicht in einer 55 m2 großen Wohnung.</button>
+            <button type="button" class="accordionBtn">Ich habe gerade einen Brief von Ihnen erhalten, in dem steht, dass mit meinem Vertrag etwas Verdächtiges oder Illegales sein könnte, aber es steht nicht was. Was hat mein Vermieter getan?</button>
             <div class="accordion-content">
-              <p>Ich bitte um Entschuldigung. In vielen Anzeigen wird die Hausnummer nicht angegeben, und manchmal mache ich Fehler bei der Suche nach dem Hausbrief in Komplexen mit mehreren Zimmern. Wenn jemand kürzlich in Ihr Gebäude eingezogen ist, ist der Brief wahrscheinlich für ihn bestimmt. </p>
+              <p>Im Jahr 2024 habe ich eine anonyme Hotline/ein Formular eingerichtet, über das Menschen Mietsituationen melden können, über die sie besorgt sind. Wenn die Situation verdächtig genug war oder ich der Meinung war, dass es gerechtfertigt war, den Mieter zu kontaktieren, habe ich einen Brief verschickt. Aus rechtlichen Gründen vermeide ich es, zu viele Details im Brief anzugeben, da es oft vorkommt, dass der Vermieter/Eigentümer diese Briefe abfängt, entweder versehentlich oder absichtlich. </p>
+            </div>
+          </div>
+
+          <div class="accordion" id="a2">
+            <button type="button" class="accordionBtn">Ich bin ein Vermieter. Können Sie mir bei einem Problem helfen? Ich verspreche, Ihnen viel Geld zu zahlen, das ich all meinen Mietern gestohlen habe.<p></p></button>
+            <div class="accordion-content">
+              <p>Nein. </p>
+            </div>
+          </div>
+
+          <div class="accordion" id="a2">
+            <button type="button" class="accordionBtn">Ich habe gerade einen Brief von Ihnen erhalten, aber ich glaube, Sie haben ihn an die falsche Adresse geschickt. Ich wohne in einem 20m2 Studio, nicht in einer 55m2 Wohnung.</button>
+            <div class="accordion-content">
+              <p>Entschuldigung dafür. Viele Anzeigen geben nicht die Hausnummer an und manchmal mache ich Fehler beim Finden des Hausbriefs in Mehrraum-Komplexen. Wenn kürzlich jemand in Ihr Gebäude eingezogen ist, ist der Brief wahrscheinlich für diese Person bestimmt. </p>
             </div>
           </div>
 
           <div class="accordion" id="a3">
-            <button type="button" class="accordionBtn"><p>Woher weiß ich, dass es sich nicht um einen Betrug handelt?</p></button>
+            <button type="button" class="accordionBtn">
+              <p>Woher weiß ich, dass dies kein Betrug ist?</p>
+            </button>
             <div class="accordion-content">
-              <p>Rent Buster NL ist ein in den Niederlanden registriertes Unternehmen (KvK-Nummer: 87138840) mit Sitz in Arnheim, einem niederländischen Bankkonto und einer Telefonnummer. Ich biete eine kostenlose Beratung per Videoanruf an. Sie müssen nichts unterschreiben/bezahlen und Sie können jederzeit wieder gehen.</p>
+              <p>Abgesehen von den zahlreichen Nachrichtenartikeln, die über mich geschrieben wurden, ist Rent Buster NL ein registriertes Unternehmen in den Niederlanden (KvK-Nummer: 87138840) mit Sitz in Arnhem und einem niederländischen Bankkonto und einer Telefonnummer. Ich biete eine kostenlose Beratung per Videoanruf an. Sie müssen nichts unterschreiben/bezahlen und können jederzeit gehen.</p>
             </div>
           </div>
 
           <div class="accordion" id="a4">
-            <button type="button" class="accordionBtn">Gibt es eine Datenbank, aus der ich ersehen kann, wie hoch die gesetzliche Höchstmiete für eine Wohnung ist?</button>
+            <button type="button" class="accordionBtn">Gibt es eine Datenbank, die mir sagt, was die maximal zulässige Miete für eine Adresse ist?</button>
             <div class="accordion-content">
-              <p>Leider nein, sie muss von Hand berechnet werden. Er hängt von vielen Faktoren ab und ändert sich jedes Jahr aufgrund von Schwankungen bei den Hauspreisen, dem Grundriss, der Energiebewertung usw. Die Gemeinden in Rotterdam und Utrecht bieten auf ihren Websites einen rudimentären Rechner an, der jedoch nur eine mögliche Bandbreite von Werten und nur innerhalb der jeweiligen Stadt berechnet.
+              <p>Leider nein, es muss von Hand berechnet werden. Es variiert je nach vielen Faktoren und ändert sich jedes Jahr aufgrund von Schwankungen der Hauspreise, des Grundrisses, der Energiebewertung usw. Die Gemeinden Rotterdam und Utrecht bieten auf ihren Websites einen rudimentären Rechner an, aber sie berechnen nur eine mögliche Bandbreite von Werten und nur innerhalb ihrer jeweiligen Städte. Sie können auch meinen Rechner oben auf der Seite verwenden.
                 <br> Bereitgestellte Links:
-                <a href="https://huurprijscalculator.rotterdam.nl/index.html" target="_blank" style="color: cornflowerblue;">Rotterdam</a> ,
-                <a href="https://www.huurteam-utrecht.nl/en/rental-price-checker/" target="_blank" style="color: cornflowerblue;">Utrecht</a></p>
+                <a href="https://huurprijscalculator.rotterdam.nl/index.html" target="_blank"
+                  style="color: cornflowerblue; --darkreader-inline-color: var(--darkreader-text-6495ed, #65a9ed);"
+                  data-darkreader-inline-color="">Rotterdam</a> ,
+                <a href="https://www.huurteam-utrecht.nl/en/rental-price-checker/" target="_blank"
+                  style="color: cornflowerblue; --darkreader-inline-color: var(--darkreader-text-6495ed, #65a9ed);"
+                  data-darkreader-inline-color="">Utrecht</a>
+              </p>
             </div>
           </div>
 
           <div class="accordion" id="a5">
-            <button type="button" class="accordionBtn">Ich glaube, ich zahle zu viel für mein Zimmer/Haus/Wohnung, aber es hat mich Monate gekostet, diese Wohnung zu finden, und ich will den Vermieter nicht verärgern und rausgeschmissen werden, weil ich Ärger mache. Ich würde lieber mehr zahlen, als diese Wohnung zu verlieren.</button>
+            <button type="button" class="accordionBtn">Ich denke, ich zahle zu viel für mein Zimmer/Haus/Wohnung, aber es hat Monate gedauert, diesen Platz zu finden, und ich möchte den Vermieter nicht verärgern und rausgeworfen werden, weil ich Ärger mache. Ich würde lieber extra zahlen, als diesen Platz zu verlieren. Was passiert, wenn ich mich beschwere?</button>
             <div class="accordion-content">
-              <p>Das ist verständlich. Es ist schwierig, in den Niederlanden eine Wohnung zu finden, und es ist möglich, dass dieses Verfahren die Beziehung zwischen Ihnen und dem Vermieter belastet. Es liegt an Ihnen zu entscheiden, ob die finanziellen Einsparungen durch eine geringere Miete (vielleicht Tausende von Euro) das Risiko wert sind, dass der Vermieter Ihren Vertrag nicht verlängert. Die Suche nach einem neuen Mieter ist mit Unannehmlichkeiten verbunden, und es gibt keine Garantie dafür, dass der neue Mieter bereit ist, den höheren ursprünglichen Preis zu zahlen. Vermieter, die innerhalb von drei Jahren mehrfach vor der Mietkommission gestanden haben, zahlen jedes Mal eine höhere Gebühr, wenn sie den Fall verlieren: ein Umstand, den ich den Vermietern, mit denen ich zu tun habe, deutlich mache.
-                <br style="margin-bottom: 0.7rem;">Das gilt auch nur, wenn Sie einen befristeten Vertrag haben (weniger als 2 Jahre). Wenn Sie einen unbefristeten Vertrag haben, kann der Vermieter Sie nicht rausschmeißen, wenn Sie den Mietpreis anfechten. Sie können wahrscheinlich so lange dort bleiben, wie Sie wollen. Sollte der Vermieter versuchen, Sie zu vertreiben, können Sie sich auf ein ganzes Arsenal von Mieterrechten berufen, um Ihre Vertreibung zu verhindern. Solange Sie sich anständig benehmen, sollte es keinen Grund geben, warum Ihr Vermieter Sie zwangsräumen kann, und ganz sicher nicht, weil Sie Ihre Rechte als Mieter wahrgenommen haben. 
-                </p>
+              <p>Das ist verständlich. Es ist schwierig, Mietwohnungen in den Niederlanden zu finden, und es ist möglich, dass dieses Verfahren die Beziehung zwischen Ihnen und dem Vermieter verschlechtert. Wenn Sie einen befristeten Vertrag haben, ist es möglich zu warten, bis Ihr Vertrag unbefristet wird, bevor Sie das Verfahren einleiten. Um Missbrauch zu verhindern, gibt die Huurcommissie Mietern mehr Flexibilität bei der Frist für die Beantragung einer Mietminderung (bis zu sechs Monate nach Ende des befristeten Vertrags). Sobald Ihr Vertrag unbefristet wird (oder Sie ausziehen), kann alles, was Sie zu viel bezahlt haben, an Sie zurückerstattet werden.
+                <br style="margin-bottom: 0.7rem;"> Dies gilt auch nur, wenn Sie einen befristeten Vertrag haben (weniger als 2 Jahre) und länger bleiben möchten. Wenn Sie einen befristeten Vertrag haben und sicher sind, dass Sie am Ende ausziehen möchten, haben Sie kein zusätzliches Räumungsrisiko. Wenn Sie einen unbefristeten Vertrag haben, ist der Vermieter machtlos, Sie zu räumen, weil Sie gegen den Mietpreis Berufung einlegen. Sie werden wahrscheinlich so lange dort bleiben können, wie Sie möchten. Sollte der Vermieter versuchen, Sie zu räumen, haben Sie ein Arsenal an Mieterrechten, auf die Sie zurückgreifen können, um Ihre Räumung zu verhindern. Solange Sie sich sauber verhalten, sollte es keinen Grund geben, warum Ihr Vermieter Sie räumen kann, und ganz SICHER nicht, weil Sie Ihre Rechte als Mieter ausgeübt haben.
+
+              </p>
             </div>
           </div>
 
           <div class="accordion" id="a6">
-            <button type="button" class="accordionBtn">Was ist also Ihr Ziel bei all dem?</button>
+            <button type="button" class="accordionBtn">Okay, also was ist Ihr Ziel bei all dem?</button>
             <div class="accordion-content">
-              <p>Ik heb persoonlijke ervaring met slechte verhuurders die huurders te veel laten betalen. Ik zie niet graag dat mensen worden uitgebuit en ik wil er iets aan doen. Ik werk op donaties van succesvolle zaken en zaken kosten geld. Ik wil dit fulltime doen en helaas ben ik geen werknemer in loondienst van een verhuurorganisatie. Een zaak runnen en brieven versturen kost geld en ik moet mijn eigen huur en eten betalen. Wat betreft hoeveel, dat is geheel aan u. Als ik succesvol ben, bespaar ik u misschien duizenden euro's per jaar. U kunt beslissen hoeveel mijn diensten u waard zijn. Vergelijkbare organisaties, zoals Bumarang, eisen een groot deel van de afrekening in ruil voor dezelfde dienst.  </p>
+              <p>Ich habe persönliche Erfahrungen im Umgang mit schlechten Vermietern gemacht, die Mieter zu viel bezahlen lassen. Ich mag es nicht, wenn Menschen ausgenutzt werden, und ich möchte etwas dagegen tun. Leider ist das nicht kostenlos zu machen. Ich möchte dies Vollzeit tun und leider bin ich kein angestellter Mitarbeiter einer Mietorganisation. Der Betrieb einer Website, die Recherche von Immobilien und das Versenden von Briefen kostet Geld, und ich muss meine eigene Miete bezahlen und essen. Jeder gespendete Betrag hilft mir, den nächsten Mieter zu warnen, der sich möglicherweise in einer ähnlichen Situation befindet wie Sie. Wenn Ihre Herangehensweise an diese Vereinbarung "Scheiß auf alle anderen, ich habe meins" ist, dann ist Rentbuster nicht der Service für Sie. Was die Höhe betrifft, wird dies von Ihnen bestimmt: Ich arbeite mit Geld, das Sie aus einer erfolgreichen Einigung spenden. Wenn ich erfolgreich bin, spare ich Ihnen möglicherweise Tausende von Euro pro Jahr. Sie können entscheiden, wie viel Ihnen meine Dienstleistungen wert sind. Bitte beachten Sie, dass ähnliche Organisationen wie Bumarang einen großen Teil der Einigung (&gt;50%) im Austausch für denselben Service verlangen. Scherz-Spenden werden nicht akzeptiert und werden aus Prinzip zurückerstattet. Was die Richtlinien angeht, wie viel zu geben ist: Einige Leute geben 10% des erstatteten Betrags, andere geben 5%, einige geben 1 Monat Differenz zwischen alter und neuer Miete. </p>
             </div>
           </div>
 
-          <div class="accordion" >
+
+          <div class="accordion">
             <button type="button" class="accordionBtn">Warum gehe ich nicht einfach zu einer Mietorganisation? Warum brauche ich Sie überhaupt?</button>
             <div class="accordion-content">
-              <p>
-                Es gibt in der Tat viele Organisationen, die Ihnen im Umgang mit Ihrem Vermieter helfen können. Einige von ihnen verlangen einen höheren Preis für ihre Dienste. Außerdem sind sie reaktionär: Sie reagieren nur auf Anfragen, anstatt wie Rent Buster NL proaktiv nach Mietern zu suchen, die nicht ahnen, dass sie zu viel zahlen.
-                <br style="margin-bottom: 0.7rem;"> Natürlich sind Sie durchaus in der Lage, Ihren eigenen Prozess gegen Ihren Vermieter zu führen. Sie können auch Ihr eigenes Essen anbauen, Ihr Haar selbst schneiden, Ihr Auto selbst reparieren. Diese Dinge erfordern, wie alles andere auch, Zeit und Energie, um zu lernen, wie sie umgesetzt werden können. Sie werden auch mit den manchmal chaotischen und bitteren Interaktionen mit Ihrem Vermieter zurechtkommen müssen, der wahrscheinlich mehr weiß als Sie und Sie mit leeren Drohungen einschüchtern kann. Sie können das alles selbst in die Hand nehmen, aber es ist gut, jemanden im Rücken zu haben, der Ihnen mit Rat und Tat zur Seite steht. 
-                <br style="margin-bottom: 0.7rem;">  Langfristig wird das verdiente Geld dazu dienen, mich zu informieren und zu verhindern, dass andere um ihre Miete betrogen werden, und den niederländischen Wohnungsmarkt wieder fairer zu gestalten. Ein Teil des Geldes wurde verwendet, um den Brief zu bezahlen, den Sie erhalten haben.
-
-                </p>
+              <p>Es gibt tatsächlich viele Organisationen, die Ihnen beim Umgang mit Ihrem Vermieter helfen können. Einige berechnen für ihre Dienste. Sie sind auch reaktiv: Sie reagieren nur auf Anfragen, anstatt den proaktiven Ansatz von Rent Buster NL zu verfolgen, Mieter aufzuspüren, die nicht wissen, dass sie zu viel zahlen.
+                <br style="margin-bottom: 0.7rem;"> Natürlich sind Sie durchaus in der Lage, Ihren eigenen Fall gegen Ihren Vermieter aufzubauen. Tatsächlich ist es gut, dass Sie diese Initiative zeigen, denn je mehr Menschen dies tun, desto besser. Meine Dienste sind für diejenigen von Ihnen, die nicht die Zeit, Energie oder das Wissen haben, um mit dem Papierkram, dem Hin und Her mit dem Vermieter oder der erforderlichen Recherche umzugehen.
+              </p>
             </div>
           </div>
-		  <div class="accordion" >
-            <button type="button" class="accordionBtn">Wir sind in den Niederlanden. Warum habe ich einen Brief in Englisch und nicht in meiner Muttersprache erhalten?</button>
+
+          <div class="accordion">
+            <button type="button" class="accordionBtn">Ihr Brief sagte mir, dass ich möglicherweise eine illegale Vermittlungsgebühr bezahlt habe. Ist das nicht normal?</button>
             <div class="accordion-content">
-              <p>Hauptsächlich aus praktischen Gründen. Die Niederlande sind sehr international, und viele der Mieter, die ich anschreibe, sprechen oder lesen normalerweise kein Niederländisch. Außerdem bin ich ein Umweltschützer, und da die Niederländer in der Regel ausgezeichnet Englisch sprechen, halten wir den Ausdruck einer zusätzlichen Seite auf Niederländisch/Deutsch für überflüssig und verschwenderisch. </p>
+              <p>Nein, das ist nicht normal. Laut einem Urteil des Obersten Gerichtshofs von 2016 ist es einem Makler verboten, beide Seiten in einem Vertrag zu vertreten. Sie können nur Zahlungen von der Seite akzeptieren, die sie vertreten. Wenn Sie die Anzeige für die Wohnung, in der Sie wohnen, auf einer Website gefunden haben, bedeutet dies, dass der Vermieter bereits die Dienste des Maklers in Anspruch genommen hat und nur von ihm/ihr Zahlungen akzeptieren kann. Alle Gebühren, die dem Mieter außer der Miete berechnet werden, sind verboten. Dazu gehören: Schlüsselgeld, Verwaltungsgebühren, Registrierungsgebühren, Vertragskosten. Es gibt viele Euphemismen dafür. Die meisten Agenturen berechnen diese Gebühren nicht mehr, aber einige versuchen immer noch, sie in die Transaktion zu schmuggeln, insbesondere wenn Expats, die die Regeln nicht kennen, beteiligt sind. </p>
             </div>
           </div>
 
+
+          <div class="accordion">
+            <button type="button" class="accordionBtn">Was meinen Sie, wenn Sie 'busting/unbustable' sagen?</button>
+            <div class="accordion-content">
+              <p>Busting ist der Prozess, den Mietpreis Ihres Hauses bei der Huurcommissie senken zu lassen. Eine Wohnung/ein Studio ist bustable, wenn sie weniger als 187 Punkte erreicht (Juli 2024-Juni 2025) oder einen prognostizierten neuen Mietpreis von weniger als ca. 1150 Euro hat. Wenn sie groß ist (&gt;80m2) und sehr energieeffizient (Label A), wird sie wahrscheinlich zu viele Punkte erreichen und ein Vrij/Freier Sektor (Unbustable) sein</p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <button type="button" class="accordionBtn">Ich suche einen bustable Platz zum Wohnen. Können Sie mir einen Platz finden?</button>
+            <div class="accordion-content">
+              <p>Leider nicht. Ich bin die letzte Person, die Sie für die Suche nach einem Platz für Sie haben möchten. Es ist möglich, dass ich einigen Maklern bekannt bin und ich bezweifle, dass sie etwas Nettes über mich zu sagen haben. Wenn ich in Ihrem Namen nach einem Platz zum Wohnen fragen würde, würden sie wahrscheinlich vermuten, dass ich fragte, damit ich den Platz später busten könnte. Ich biete jedoch eine wöchentliche Liste potenziell bustable Häuser auf meinem Subreddit namens Hotsheets an. Sie finden den Link zu meinem Subreddit am Ende der Seite.</p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <button type="button" class="accordionBtn">Ich bin ein absoluter Neuling in Sachen Wohnen in den Niederlanden, was kann ich tun?</button>
+            <div class="accordion-content">
+              <p>Rufen Sie mich an. Bis ich den Youtube-Kanal zum Laufen gebracht habe, um diese Art von Fragen zu beantworten, ist das Beste, was ich anbieten kann, ein Gespräch. Ich genieße die Ablenkung. Der größte Teil meines Tages wird damit verbracht, Excel-Tabellen und Pararius-Anzeigen anzusehen.</p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <button type="button" class="accordionBtn">Meine Wohnung/mein Studio hat kein Energielabel. Ist das schlimm?</button>
+            <div class="accordion-content">
+              <p>Ein Energielabel ist ein wichtiges Dokument, das angibt, wie energieeffizient Ihre Wohnung/Ihr Studio ist. Per Gesetz ist der Vermieter verpflichtet, Ihnen dies bei Ihrem Einzug zur Verfügung zu stellen. Viele Vermieter haben dieses Dokument nicht und seit Juli 2024 können sie dafür in einem Huurcommissie-Fall bestraft werden, indem ein Label, das sie nach Ihrem Einzug erhalten haben, ausgeschlossen wird. Dies könnte eine Ersparnis von 200 Euro pro Monat bei Ihrer Miete für diese Aufsicht bedeuten. Der niederländische Oberste Gerichtshof entschied im Juni 2023, dass dies unfair gegenüber dem Vermieter war, insbesondere wenn der Wohnraum energieeffizient war, sodass im Prinzip das Energielabel einbezogen werden könnte, aber dies wird von Fall zu Fall entschieden. Ich werde Sie auf die damit verbundenen Risiken während Ihres Falls aufmerksam machen.</p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <button type="button" class="accordionBtn">Was ist COROP?</button>
+            <div class="accordion-content">
+              <p>COROP ist eine spezielle Bezeichnung für neue oder umfassend renovierte kleine (&lt;40m2) Wohnungen/Studios in Amsterdam und Utrecht. Wenn Sie in einem sehr neuen (gebaut nach 2018) oder sehr energieeffizienten Gebäude (A+++) wohnen, ist Ihr Mietpreis wahrscheinlich unbustable. Ich werde natürlich überprüfen, um sicherzustellen, dass es qualifiziert ist.
+              </p>
+            </div>
+
+            <div class="accordion">
+              <button type="button" class="accordionBtn">Mein Mietvertrag ist all-in. Was bedeutet das?</button>
+              <div class="accordion-content">
+                <p>Ich habe einen umfangreichen Beitrag darüber geschrieben, wie Sie mit Ihrem All-in-Vertrag umgehen können hier <a
+                    href="https://www.reddit.com/r/Rentbusters/comments/1gj1o8f/the_allin_split_a_quick_and_effective_way_to/"
+                    target="_blank"
+                    style="color: cornflowerblue; --darkreader-inline-color: var(--darkreader-text-6495ed, #65a9ed);"
+                    data-darkreader-inline-color="">Link </a> </p>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <button type="button" class="accordionBtn">Wird mein Freier-Sektor-Vertrag nach dem 1. Juli 2024 reguliert/bustable?</button>
+              <div class="accordion-content">
+                <p>Am 1. Juli 2024 trat das Gesetz für bezahlbare Miete (Wet Betaalbare Huur) in Kraft. Dieses Gesetz macht etwa 90% der privaten Mietwohnungen bustable. Das Gesetz hat auch Konsequenzen für Mieter, die vor dem 1. Juli 2024 in ihre Freier-Sektor-Wohnung eingezogen sind. Wenn Sie die Frist verpasst haben, Ihre Wohnung zu busten, öffnet sich am 1. Juli 2025 ein Gelegenheitsfenster, wenn Sie Ihren Vermieter bitten können, Ihren Mietpreis zu senken, wenn Ihre Immobilie &lt;144 Punkte nach den aktuellen Punktesystemen erreicht. Für alle, die ihren Vertrag am oder nach dem 1. Juli 2024 unterschrieben haben und möglicherweise die Chance verpasst haben zu busten, können Sie Ihre Wohnung auch busten, obwohl Sie nicht bis zum 1. Juli 2025 warten müssen. Sie haben auch eine viel höhere Punktegrenze (&lt;187 Punkte). Kontaktieren Sie mich ohne Verzögerung. </p>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <button type="button" class="accordionBtn">Wer ist BPW und warum empfehlen Sie, dass ich Mitglied werde?</button>
+              <div class="accordion-content">
+                <p>Bond Precaire Woonvormen (BPW) ist eine Mieterrechtsgruppe, die eingreift, um Mieter zu verteidigen, wenn das Risiko von Gewalt/Einschüchterung durch den Vermieter als Reaktion auf einen Mietminderungsfall besteht. Oft reagieren kleine Vermieter schlecht auf einen Mieter, der als jemand wahrgenommen wird, der das Gesetz nutzt, um eine Mietminderung zu erreichen. Ich habe Fälle gesehen, in denen Mieter mit Mord bedroht, angegriffen, gemobbt und von ihrem Vermieter oder deren Vertretern bedroht wurden. Bestimmte große Vermieter wie Marcel van Hooijdonk sind berüchtigt für diese Art von Verhalten. BPW kann helfen, aber sie benötigen eine Vorankündigung, um Mitglieder zu sammeln, um Maßnahmen zu ergreifen. Obwohl BPW auch eine Freiwilligenorganisation ist, benötigen sie immer noch Geld, um zu funktionieren, und ich mag es persönlich nicht, ihnen Fälle zu schicken, bei denen es bereits zu spät ist, damit sie effektive Maßnahmen ergreifen können, weil der Mieter noch kein Mitglied war. In bestimmten Fällen werde ich mich weigern, Ihren Fall bei der Huurcommissie einzureichen, wenn ich denke, dass eine vernünftige Chance besteht, dass der Vermieter zu Ihrem eigenen Schutz zu gewalttätigem Verhalten greift, bis Sie Mitglied von BPW werden oder zustimmen, dass ich sie für Sie kontaktiere. Je zweifelhafter und direkt illegaler Ihr Mietvertrag ist, desto größer ist die Chance, dass der Vermieter zu diesen Aktionen greift. Ich empfehle den Leuten auch, aus ähnlichen Gründen eine Rechtsschutzversicherung abzuschließen. </p>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <button type="button" class="accordionBtn">Wo kann ich mehr darüber erfahren? </button>
+              <div class="accordion-content">
+                <p>Schauen Sie sich mein <a href="https://www.reddit.com/r/Rentbusters/" target="_blank"
+                    style="color: cornflowerblue; --darkreader-inline-color: var(--darkreader-text-6495ed, #65a9ed);"
+                    data-darkreader-inline-color="">Subreddit </a> an. Ich bin dort sehr aktiv und poste viele Artikel über das Mieten in den Niederlanden. Ich poste alle Arten von Artikeln, nützliche Rechner, Tipps für die Rückerstattung von Servicekosten und etwas humorvolles Material.</p>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
+
 
       <div class="line-animation-container">
         <div class="line"></div>
@@ -396,31 +462,96 @@
 
       <div class="blog" id="blog">
 
-        <h1 style="margin-top: 0rem">Neuesten Nachrichten</h1>
-
-      
-        <article class="article blog-post">
-            <a style="text-decoration: none;" href="https://www.reddit.com/r/NetherlandsHousing/comments/vwuphe/the_predatory_tenant_how_to_hunt_for_cheap/" target="_blank">
-              <img src="https://cdn.pixabay.com/photo/2018/04/13/21/24/lion-3317670_960_720.jpg" alt="" class="post-img">
+          <h1 style="margin-top: 0rem">Neueste Nachrichten</h1>
+          <article class="article blog-post">
+            <a style="text-decoration: none;"
+              href="https://nltimes.nl/2023/03/25/netherlands-modern-day-robin-hood-helping-tenants-fight-greedy-landlords?utm_source=dlvr.it&amp;utm_medium=facebook"
+              target="_blank">
+              <img src="../img/NLtimes.png" alt="" class="post-img">
               <div class="post-content">
-                <h2 class="post-name">The predatory tenant: How to hunt for cheap accommodation and screw greedy landlords instead of the other way around</h2>
-                <p class="post-text">Netherlands has being going through a bit of a rough period with its housing market. The Dutch government is trying to reduce its nitrogen emissions and first t</p>
+                <h3 class="post-name">Der moderne Robin Hood der Niederlande hilft Mietern gegen gierige Vermieter zu kämpfen
+                  (25. März 2023)</h3>
+                <p class="post-text">Eine Organisation mit Sitz in Arnhem hat kürzlich begonnen, einen proaktiven Ansatz zu verfolgen, um skrupelloses Verhalten niederländischer Vermieter anzugehen... t</p>
               </div>
             </a>
-        </article>
+          </article>
 
-        <article class="article blog-post">
-            <a style="text-decoration: none;" href="https://www.reddit.com/r/NetherlandsHousing/comments/vwuphe/the_predatory_tenant_how_to_hunt_for_cheap/" target="_blank">
-              <img src="https://www.holland.com/upload_mm/d/f/c/69557_fullimage_sint-servaas-brug-maas-maastricht-stad-eighty8things-1360%20copy.jpg" alt="" class="post-img">
+          <article class="article blog-post">
+            <a style="text-decoration: none;"
+              href="https://www.telegraaf.nl/nieuws/901671984/een-extreme-huur-van-1600-euro-per-maand-deze-robin-hood-halveert-m"
+              target="_blank">
+              <img src="../img/telegraaf.png" alt="" class="post-img">
               <div class="post-content">
-                <h2 class="post-name">9 things you wish you knew about renting in Maastricht and the Netherlands before you came here <br><br> </h2>
-                <p class="post-text">Many of the redditors/ facebook/ forum users who rent apartments and studios in the Netherlands seem to be afraid to bring up issues with the landlord that they fear might get them evicted or their contracts not renewed.</p>
+                <h3 class="post-name">Een extreme huur van 1600 euro per maand? Deze Robin Hood halveert m (July 20
+                  2023)</h3>
+                <p class="post-text">Amsterdam - Extreme huren zijn al lang geen uitzondering meer. Veel mensen hebben
+                  eigenlijk recht op een forse huurverlaging. Shane White maakt er zijn missie van om die ook af te
+                  dwingen. Dat is niet altijd zonder risico.... t</p>
               </div>
             </a>
-        </article>
+          </article>
 
-      </div>
+          <article class="article blog-post">
+            <a style="text-decoration: none;"
+              href="https://www.telegraaf.nl/nieuws/901671984/een-extreme-huur-van-1600-euro-per-maand-deze-robin-hood-halveert-m"
+              target="_blank">
+              <img src="../img/Trouw.png" alt="" class="post-img">
+              <div class="post-content">
+                <h3 class="post-name">Shane strijdt tegen huisjesmelkers. ;Ik werk niet zozeer voor de armen, maar wel
+                  tegen de rijken(July 13 2023)</h3>
+                <p class="post-text">Particuliere verhuurders vragen vaak te veel huur. De Ier Shane White heeft het
+                  zijn missie gemaakt bewoners te helpen bij een huurverlagingsprocedure.. t</p>
+              </div>
+            </a>
+          </article>
 
+
+          <article class="article blog-post">
+            <a style="text-decoration: none;"
+              href="https://www.ad.nl/binnenland/jackie-wist-huur-te-verlagen-van-800-naar-350-euro-per-maand-maar-voel-me-niet-meer-veilig~afa279c1/"
+              target="_blank">
+              <img src="../img/ad.png" alt="" class="post-img">
+              <div class="post-content">
+                <h3 class="post-name">Jackie wist huur te verlagen van 800 naar 350 euro per maand</h3>
+                <p class="post-text">De krappe woningmarkt dwingt huurders tot rare sprongen. Woningzoekenden gaan nu
+                  zelfs op zoek naar te dure woningen om daarna snel een huurverlaging af te dwingen.. t</p>
+              </div>
+            </a>
+          </article>
+
+
+          <article class="article blog-post">
+            <a style="text-decoration: none;"
+              href="https://www.reddit.com/r/NetherlandsHousing/comments/vwuphe/the_predatory_tenant_how_to_hunt_for_cheap/"
+              target="_blank">
+              <img
+                src="../img/69557_fullimage_sint-servaas-brug-maas-maastricht-stad-eighty8things-1360 copy.jpg"
+                alt="" class="post-img">
+              <div class="post-content">
+                <h3 class="post-name">9 Dinge, die Sie gerne über das Mieten in Maastricht und den Niederlanden gewusst hätten, bevor
+                  Sie hierher kamen <br><br> </h3>
+                <p class="post-text">Viele Redditors/Facebook/Forumsnutzer, die Wohnungen und Studios in den
+                  Niederlanden mieten, scheinen Angst zu haben, Probleme mit dem Vermieter anzusprechen, aus Angst, dass sie
+                  geräumt werden oder ihre Verträge nicht verlängert werden.</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="article blog-post">
+            <a style="text-decoration: none;"
+              href="https://new.reddit.com/r/Rentbusters/comments/11t9nmh/another_motivating_reason_to_get_your_rent/"
+              target="_blank">
+              <img src="../img/IMG_9966.jpg" alt="" class="post-img">
+              <div class="post-content">
+                <h3 class="post-name">Rentbusting kann Ihnen helfen, Huurtoeslag (Mietzuschuss) zu erhalten <br><br> </h3>
+                <p class="post-text">Mietzuschuss ist nur möglich, wenn Sie eine Grundmiete von &lt;879 Euro pro Monat zahlen.
+                  Eine Mietminderung zu erhalten, ermöglicht es Ihnen, einen Antrag zu stellen.</p>
+              </div>
+            </a>
+          </article>
+
+
+        </div>
 
 
       <div class="line-animation-container">
@@ -430,43 +561,47 @@
       <!-- CONTACT US SECTION -->
       <div class="contact-us" id="contact-us">
         <div class="contact-form">
-          <h2>Kontakt</h2>
-          <p>Füllen Sie das Formular aus und wir werden Sie bald kontaktieren. Nach dem Absenden werden Sie auf eine Seite mit einem Captcha umgeleitet, um Spam zu verhindern</p>
+          <h2>Kontaktieren Sie uns</h2>
+          <p>Füllen Sie das Formular aus und wir werden uns in Kürze bei Ihnen melden. Nach dem Absenden werden Sie zu einer
+            Seite mit einem Captcha weitergeleitet, um Spam zu verhindern.</p>
 
           <form action="https://formspree.io/f/xoqbjbnv" method="POST" id="form">
+            <div class="group">
+              <div class="empty-space"></div>
+              <input type="text" name="firstName" id="firstName" placeholder="Vorname" class="form-element" required>
+            </div>
+
+            <div class="group">
+              <div class="empty-space"></div>
+              <input type="text" name="secondName" id="secondName" placeholder="Nachname" class="form-element"
+                required>
+            </div>
+
+            <div class="group">
+              <div class="empty-space"></div>
+              <input type="email" name="email" id="email" placeholder="E-Mail" class="form-element" required>
+            </div>
+
+            <div class="group">
+              <div class="empty-space"></div>
+              <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Telefonnummer" class="form-element"
+                required>
+            </div>
+
+
+            <div class="full">
               <div class="group">
-                <div class="empty-space"></div>
-                <input type="text" name="firstName" id="firstName" placeholder="Vornamen" class="form-element" required>
+                <div class="empty-space-big"></div>
+                <textarea name="message" id="message" class="form-element" placeholder="Ihre Nachricht"
+                  spellcheck="false"></textarea>
               </div>
-              
-              <div class="group">
-                <div class="empty-space"></div>
-                <input type="text" name="secondName" id="secondName" placeholder="Zweiter Name (Optional)" class="form-element" >
-              </div>
+            </div>
 
-              <div class="group">
-                <div class="empty-space"></div>
-                <input type="email" name="email" id="email" placeholder="Email" class="form-element" required>
-              </div>
+            <br>
 
-              <div class="group">
-                <div class="empty-space"></div>
-                <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Telefon-Nummer (Optional)" class="form-element" >
-              </div>
-
-
-              <div class="full">
-                <div class="group">
-                  <div class="empty-space-big"></div>
-                <textarea name="message" id="message" class="form-element" placeholder="Ihre Nachricht" spellcheck="false"></textarea>
-                </div>
-              </div>
-
-              <br>
-
-              <div class="submit">
-                <input type="submit" value="Einreichen">
-              </div>
+            <div class="submit">
+              <input type="submit" value="Absenden">
+            </div>
 
           </form>
         </div>
@@ -479,69 +614,88 @@
       <div class="footer-container">
         <div class="footer-row">
           <div class="footer-column" id="info-footer">
-            <h4>Ansprechpartner</h4>
+            <h4>Kontakte</h4>
             <ul>
-              <li><p>Kontakt Telefon:&#10240<span class="break"></span>+31 681261764</p></li>
-              <li><p>Whatsapp:&#10240<span class="break"></span>+31 681261764</p></li>
-              <li><p>Email:&#10240<span class="break"></span>info(at)rentbuster(dot)nl</p></li>
-              <li><p>KvK:&#10240<span class="break"></span>87138840</p></li>
-              <li><p>Kontonummer:&#10240<span class="break"></span>NL80INGB0755908910</p></li>
+              <li>
+                <p>Kontakt Telefon:&#10240<span class="break"></span>+31 681261764</p>
+              </li>
+              <li>
+                <p>Whatsapp:&#10240<span class="break"></span>+31 681261764</p>
+              </li>
+              <li>
+                <p>E-Mail:&#10240<span class="break"></span>info(at)rentbuster(dot)nl</p>
+              </li>
+              <li>
+                <p>KvK:&#10240<span class="break"></span>87138840</p>
+              </li>
+              <li>
+                <p>Bankkontonummer:&#10240<span class="break"></span>NL80INGB0755908910</p>
+              </li>
             </ul>
           </div>
 
           <div class="footer-column">
             <h4>Soziale Medien</h4>
             <div class="social-media">
-              <a href="https://www.reddit.com/r/Rentbusters/" target="_blank"><img src="../img/reddit-logo.png" alt="reddit-icon" class="reddit-icon"></a>
-              <a href="https://www.facebook.com/profile.php?id=100085087598391" target="_blank"><img src="../img/facebook-icon.png" alt="facebook-icon" class="facebook-icon"></a>
-			        <a href="https://www.youtube.com/channel/UCjg0X1ZwTVahyRfkCr2OkNg" target="_blank"><img src="../img/youtube-logo.png" alt="youtube-icon" class="youtube-icon"></a>
+              <a href="https://www.reddit.com/r/Rentbusters/" target="_blank"><img src="../img/reddit-logo.png"
+                  alt="reddit-icon" class="reddit-icon"></a>
+              <a href="https://www.facebook.com/profile.php?id=100085087598391" target="_blank"><img
+                  src="../img/facebook-icon.png" alt="facebook-icon" class="facebook-icon"></a>
+              <a href="https://www.youtube.com/channel/UCjg0X1ZwTVahyRfkCr2OkNg" target="_blank"><img
+                  src="../img/youtube-logo.png" alt="youtube-icon" class="youtube-icon"></a>
             </div>
           </div>
         </div>
       </div>
-      <a href="/Privacyverklaring.pdf" target="_blank" class="footer-document">Privacyverklaring - © <script type="text/javascript">document.write( new Date().getFullYear() )</script> RentBusterNL</a>
-      <a href="https://lifeconsciousness.github.io/Contact_page/" target="_blank" class="credit">Made by Maksym Tovstolis</a>
+      <a href="/Privacyverklaring.pdf" target="_blank" class="footer-document">Privacyverklaring - ©
+        <script type="text/javascript">document.write(new Date().getFullYear())</script> RentBusterNL
+      </a>
+      <!-- <a href="https://lifeconsciousness.github.io/Contact_page/" target="_blank" class="credit">Made by Maksym Tovstolis</a> -->
     </footer>
-    
-    <script>
-      //dark theme toggle
-      let icon = document.getElementById("moon");
-      let iconNavbar = document.getElementById("moon-navbar");
 
-        icon.onclick = function(){
-            document.body.classList.toggle("dark-theme");   
-            if(document.body.classList.contains("dark-theme")){
-                icon.src = "../img/sun.png";
-                iconNavbar.src = "../img/sun.png";
-            }else{
-                icon.src = "../img/moon.png";
-                iconNavbar.src = "../img/moon.png";
-            }     
-        }
-
-        iconNavbar.onclick = function(){
-            document.body.classList.toggle("dark-theme");   
-            if(document.body.classList.contains("dark-theme")){
-                iconNavbar.src = "../img/sun.png";
-                icon.src = "../img/sun.png";
-            }else{
-                iconNavbar.src = "../img/moon.png";
-                icon.src = "../img/moon.png";
-            }     
-        }
-    </script>
-
-    <script src="../script.js"></script>
     <!-- <script src="../js/carousel.js"></script> -->
     <script src="../js/cursor.js"></script>
     <script src="../js/navbar.js"></script>
 
-
   </div>
 
+  <script src="../script.js"></script>
+
   <script>
+    //dark theme toggle
+    let icon = document.getElementById("moon");
+    let iconNavbar = document.getElementById("moon-navbar");
+
+    icon.onclick = function () {
+      document.body.classList.toggle("dark-theme");
+      if (document.body.classList.contains("dark-theme")) {
+        icon.src = "../img/sun.png";
+        iconNavbar.src = "../img/sun.png";
+      } else {
+        icon.src = "../img/moon.png";
+        iconNavbar.src = "../img/moon.png";
+      }
+    }
+
+    iconNavbar.onclick = function () {
+      document.body.classList.toggle("dark-theme");
+      if (document.body.classList.contains("dark-theme")) {
+        iconNavbar.src = "../img/sun.png";
+        icon.src = "../img/sun.png";
+      } else {
+        iconNavbar.src = "../img/moon.png";
+        icon.src = "../img/moon.png";
+      }
+    }
+  </script>
+
+  <!-- <script>
     const website = document.querySelector('.website');
     const consentPopup = document.querySelector('.consent-popup');
+
+    website.style.display = 'block';
+        consentPopup.style.display = 'none';
+
     if(localStorage.getItem('cookieChoice') === '0' ){
       website.style.display = 'block';
       consentPopup.style.display = 'none';
@@ -552,6 +706,7 @@
         consentPopup.style.display = 'none';
       });
     }
-  </script>
-  </body>
+  </script> -->
+</body>
+
 </html>
