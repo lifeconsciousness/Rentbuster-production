@@ -309,8 +309,6 @@
   }
 }
 .latest-news {
-  position: absolute;
-  bottom: 4vh;
   width: 100%;
   text-align: center;
   font-family: "Inter", sans-serif;
@@ -318,6 +316,7 @@
   justify-content: center;
   color: rgb(92, 92, 255) !important;
   font-size: 120%;
+  padding: 2rem 0;
 }
 
 @media (max-width: 333px) {
@@ -1374,7 +1373,7 @@ body {
   }
   .home {
     position: initial !important;
-    padding-top: 29% !important;
+    padding-top: 15% !important;
     height: 100vh !important;
   }
   .header img {
@@ -1400,6 +1399,10 @@ body {
     left: 0rem !important;
     top: 0rem !important;
     margin-bottom: 2rem;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: -moz-fit-content !important;
     height: fit-content !important;
   }
@@ -1426,7 +1429,7 @@ iframe {
 @media (max-width: 430px) and (min-width: 333px) {
   .home {
     position: initial !important;
-    padding-top: 29% !important;
+    padding-top: 12% !important;
     height: 100vh !important;
   }
   .header img {
@@ -1452,6 +1455,10 @@ iframe {
     left: 0rem !important;
     top: 0rem !important;
     margin-bottom: 2rem;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: -moz-fit-content !important;
     height: fit-content !important;
   }
@@ -1521,11 +1528,11 @@ iframe {
   }
   .home {
     height: 110vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    justify-items: center;
-    padding-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
   }
   .home .video-wrapper {
     margin-top: 3rem;
@@ -1591,13 +1598,11 @@ iframe {
 
 @media (min-width: 913px) {
   .home {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 0.1fr;
-    justify-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding-top: 10rem;
     border-bottom-left-radius: 35rem;
-    align-items: center;
   }
   .home .video-wrapper {
     margin-right: 6rem;

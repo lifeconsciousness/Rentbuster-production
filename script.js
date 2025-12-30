@@ -13,8 +13,8 @@ function loadContent() {
   }
   localStorage.setItem('firstTimeVisited', false)
 
-  const video = document.querySelector('.youtube-video')
-  video.src = 'https://www.youtube-nocookie.com/embed/xwSltGbK46E'
+  // const video = document.querySelector('.youtube-video')
+  // video.src = 'https://www.youtube-nocookie.com/embed/xwSltGbK46E'
 
   //activation of animation on scroll
 
@@ -306,24 +306,27 @@ function loadContent() {
   function autoplay() {
     interval = setInterval(function () {
       slideToRight()
-    }, 7000)
+    }, 999999)
   }
 
   window.onload = function () {
-    autoplay()
+    // autoplay()
     document.body.className += ' loaded'
   }
 }
 
 //cookie consent
 document.addEventListener('DOMContentLoaded', () => {
-  const loadButton = document.querySelector('.load-button')
-  loadButton.addEventListener('click', () => {
-    localStorage.setItem('cookieChoice', '0')
-    location.reload()
-  })
+  // const loadButton = document.querySelector('.load-button')
+  // loadButton.addEventListener('click', () => {
+  //   localStorage.setItem('cookieChoice', '0')
+  //   location.reload()
+  // })
 
-  if (localStorage.getItem('cookieChoice') === '0') {
-    loadContent()
-  }
+  // if (localStorage.getItem('cookieChoice') === '0') {
+  //   loadContent()
+  // }
+
 })
+
+loadContent()

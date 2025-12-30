@@ -1,7 +1,4 @@
 .latest-news {
-  position: absolute;
-  // top: 89vh;
-  bottom: 4vh;
   width: 100%;
   text-align: center;
   font-family: 'Inter', sans-serif;
@@ -12,6 +9,7 @@
   color: rgb(92, 92, 255) !important;
 
   font-size: 120%;
+  padding: 2rem 0;
 }
 
 @media (max-width: 333px) {
