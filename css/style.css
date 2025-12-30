@@ -1374,7 +1374,8 @@ body {
   .home {
     position: initial !important;
     padding-top: 15% !important;
-    height: 100vh !important;
+    height: 100svh !important;
+    min-height: 100svh !important;
   }
   .header img {
     margin-left: 5%;
@@ -1429,8 +1430,9 @@ iframe {
 @media (max-width: 430px) and (min-width: 333px) {
   .home {
     position: initial !important;
-    padding-top: 12% !important;
-    height: 100vh !important;
+    padding-top: 0% !important;
+    height: 100svh !important;
+    min-height: 80svh !important;
   }
   .header img {
     margin-left: 5%;
@@ -1527,12 +1529,12 @@ iframe {
     background-color: var(--white-main);
   }
   .home {
-    height: 110vh;
+    height: 100svh;
+    min-height: 80svh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 4rem;
   }
   .home .video-wrapper {
     margin-top: 3rem;
@@ -1588,7 +1590,8 @@ iframe {
 }
 @media (max-width: 350px) {
   .home {
-    height: 100vh;
+    height: 100svh;
+    min-height: 80svh;
     padding-top: 17vh !important;
   }
 }
@@ -1598,10 +1601,12 @@ iframe {
 
 @media (min-width: 913px) {
   .home {
+    height: 100svh;
+    min-height: 70svh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 10rem;
+    padding-top: 5rem;
     border-bottom-left-radius: 35rem;
   }
   .home .video-wrapper {
@@ -1642,7 +1647,10 @@ iframe {
   position: relative;
   top: 0.7rem;
   right: 1rem;
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .text-container-home h1 {
   font-size: 2.8rem;
