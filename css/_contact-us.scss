@@ -1,5 +1,6 @@
 .contact-us {
   min-height: fit-content;
+  padding: 3rem;
   padding-top: 1rem;
   padding-bottom: 4rem;
 
@@ -13,13 +14,14 @@
   h2 {
     font-family: var(--sans-serif-font);
     font-size: 5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
     text-align: center;
   }
 
   p {
     color: rgba(0, 0, 0, 0.834);
     font-family: 'Inter', sans-serif;
+    margin-bottom: 1rem;
   }
 
   @media (max-width: 333px) {

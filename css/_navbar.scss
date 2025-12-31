@@ -26,10 +26,10 @@
   align-items: center;
   width: 100vw;
   padding: 0 14rem;
-  padding-right: 11.3rem;
+  padding-right: 15rem;
   
-  @media (max-width: 1400px) {
-    padding: 0 2rem;
+  @media (max-width: 1300px) {
+    padding: 0 4.3rem;
   }
 
   @media (max-width: 1100px) {
@@ -293,3 +293,190 @@ nav {
     cursor: pointer;
   }
 }
+
+// Desktop Menu Dropdown Styles
+.desktop-menu-dropdown {
+  position: relative;
+
+  .menu-toggle {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  // Create a pseudo-element to bridge the gap
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 0.5rem;
+    display: none;
+  }
+
+  &:hover::after {
+    display: block;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    background-color: var(--white-main);
+    border: 2px solid var(--black-main);
+    border-radius: 8px;
+    box-shadow: 4px 4px 0px var(--black-main);
+    min-width: 220px;
+    padding: 0.5rem 0;
+    list-style: none;
+    z-index: 1000;
+
+    li {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+
+      a.dropdown-item {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 1rem;
+        color: var(--black-main);
+        text-decoration: none;
+        transition: background-color 0.2s ease;
+        font-size: 0.95rem;
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: flex-start;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        &::after {
+          display: none;
+        }
+
+        img.dropdown-theme-icon {
+          width: 20px;
+          height: 20px;
+          margin-right: 0.6rem;
+          flex-shrink: 0;
+        }
+
+        span {
+          flex: 1;
+        }
+      }
+    }
+  }
+
+  &:hover .dropdown-menu {
+    display: block;
+  }
+
+  // Language submenu
+  .dropdown-lang-menu {
+    position: relative;
+
+    // Create a bridge to prevent dropdown from closing
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 0.5rem;
+      height: 100%;
+      display: none;
+    }
+
+    &:hover::after {
+      display: block;
+    }
+
+    .lang-submenu {
+      display: none;
+      position: absolute;
+      left: calc(100% + 0.5rem);
+      top: 0;
+      background-color: var(--white-main);
+      border: 2px solid var(--black-main);
+      border-radius: 8px;
+      box-shadow: 4px 4px 0px var(--black-main);
+      min-width: 180px;
+      padding: 0.5rem 0;
+      list-style: none;
+
+      li {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+        a {
+          display: flex;
+          align-items: center;
+          padding: 0.75rem 1rem;
+          color: var(--black-main);
+          text-decoration: none;
+          transition: background-color 0.2s ease;
+          font-size: 0.9rem;
+          width: 100%;
+          box-sizing: border-box;
+
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+          }
+
+          // Flag icons for language submenu
+          &::before {
+            content: '';
+            display: inline-block;
+            height: 18px;
+            width: 28px;
+            flex-shrink: 0;
+            margin-right: 0.6rem;
+            background-size: cover;
+            background-position: center;
+          }
+
+          &#nl-dropdown::before {
+            background-image: url(https://www.worldometers.info/img/flags/nl-flag.gif);
+          }
+
+          &#en-dropdown::before {
+            background-image: url(https://www.worldometers.info/img/flags/uk-flag.gif);
+          }
+
+          &#ge-dropdown::before {
+            background-image: url(https://www.worldometers.info/img/flags/small/tn_gm-flag.gif);
+          }
+
+          &#fr-dropdown::before {
+            background-image: url(https://www.worldometers.info/img/flags/small/tn_fr-flag.gif);
+          }
+
+          &#ua-dropdown::before {
+            background-image: url(https://www.worldometers.info/img/flags/small/tn_up-flag.gif);
+          }
+        }
+      }
+    }
+
+    &:hover .lang-submenu {
+      display: block;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    display: none;
+  }
+}
+
+.mobile-only-nav {
+  display: none;
+
+  @media (max-width: 1100px) {
+    display: list-item;
+  }
+}
+

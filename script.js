@@ -1,3 +1,55 @@
+// --- Nested Language Dropdown Logic ---
+document.addEventListener('DOMContentLoaded', function () {
+  const nestedToggle = document.querySelector('.dropdown-nested-toggle');
+  const nestedDropdown = document.querySelector('.nested-dropdown');
+  if (nestedToggle && nestedDropdown) {
+    nestedToggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      const expanded = nestedToggle.getAttribute('aria-expanded') === 'true';
+      nestedToggle.setAttribute('aria-expanded', !expanded);
+      nestedDropdown.style.display = expanded ? 'none' : 'block';
+    });
+    // Optional: close nested dropdown when clicking outside
+    document.addEventListener('click', function (e) {
+      if (!nestedDropdown.contains(e.target) && !nestedToggle.contains(e.target)) {
+        nestedToggle.setAttribute('aria-expanded', 'false');
+        nestedDropdown.style.display = 'none';
+      }
+    });
+  }
+});
+// --- Desktop Dropdown Menu Logic ---
+document.addEventListener('DOMContentLoaded', function () {
+  const dropdown = document.querySelector('.desktop-dropdown');
+  if (!dropdown) return;
+  const toggle = dropdown.querySelector('.dropdown-toggle');
+  const menu = dropdown.querySelector('.dropdown-menu');
+
+  // Open/close on click
+  toggle.addEventListener('click', function (e) {
+    e.stopPropagation();
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', !expanded);
+    menu.style.display = expanded ? 'none' : 'flex';
+  });
+
+  // Close on click outside
+  document.addEventListener('click', function (e) {
+    if (!dropdown.contains(e.target)) {
+      toggle.setAttribute('aria-expanded', 'false');
+      menu.style.display = 'none';
+    }
+  });
+
+  // Keyboard accessibility
+  toggle.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      toggle.setAttribute('aria-expanded', 'false');
+      menu.style.display = 'none';
+      toggle.focus();
+    }
+  });
+});
 //main js code
 function loadContent() {
   console.log('content loaded')
@@ -181,27 +233,35 @@ function loadContent() {
   //dark theme toggle
   let icon = document.getElementById('moon')
   let iconNavbar = document.getElementById('moon-navbar')
+  let iconDropdown = document.querySelector('.dropdown-theme-icon')
 
-  icon.onclick = function () {
-    document.body.classList.toggle('dark-theme')
-    if (document.body.classList.contains('dark-theme')) {
-      icon.src = './translatedPages/sun.png'
-      iconNavbar.src = './translatedPages/sun.png'
-    } else {
-      icon.src = './translatedPages/moon.png'
-      iconNavbar.src = './translatedPages/moon.png'
+  function updateThemeIcons(isDark) {
+    const sunPath = './img/sun.png'
+    const moonPath = './img/moon.png'
+    const imageSrc = isDark ? sunPath : moonPath
+    
+    if (icon) icon.src = imageSrc
+    if (iconNavbar) iconNavbar.src = imageSrc
+    if (iconDropdown) iconDropdown.src = imageSrc
+  }
+
+  if (icon) {
+    icon.onclick = function () {
+      document.body.classList.toggle('dark-theme')
+      updateThemeIcons(document.body.classList.contains('dark-theme'))
     }
   }
 
-  iconNavbar.onclick = function () {
-    document.body.classList.toggle('dark-theme')
-    if (document.body.classList.contains('dark-theme')) {
-      iconNavbar.src = './translatedPages/sun.png'
-      icon.src = './translatedPages/sun.png'
-    } else {
-      iconNavbar.src = './translatedPages/moon.png'
-      icon.src = './translatedPages/moon.png'
+  if (iconNavbar) {
+    iconNavbar.onclick = function () {
+      document.body.classList.toggle('dark-theme')
+      updateThemeIcons(document.body.classList.contains('dark-theme'))
     }
+  }
+
+  // Initialize dropdown icon on page load
+  if (iconDropdown && document.body.classList.contains('dark-theme')) {
+    iconDropdown.src = './img/sun.png'
   }
 
   //carousel
