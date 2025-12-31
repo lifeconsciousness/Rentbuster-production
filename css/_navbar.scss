@@ -4,7 +4,7 @@
   //background-color: var(--transparent-white);     //CHANGED TRANSPARENT
   backdrop-filter: blur(0.7rem);
   width: 100vw;
-  height: 3.6rem;
+  height: 4.2rem;
   display: flex;
   border-bottom: solid 2px var(--black-main);
   transition: 0.2s ease-in;
@@ -479,6 +479,45 @@ nav {
 
   @media (max-width: 1100px) {
     display: list-item;
+  }
+}
+
+// Mobile Language Dropdown
+.mobile-lang-dropdown {
+  position: relative;
+
+  .mobile-lang-toggle {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .mobile-lang-menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0.5rem 1.5rem;
+
+    li {
+      margin: 0.5rem 0;
+
+      a {
+        color: var(--black-main);
+        text-decoration: none;
+        font-size: 0.95rem;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  &.lang-open .mobile-lang-menu {
+    display: block;
+  }
+
+  @media (min-width: 1100px) {
+    display: none !important;
   }
 }
 

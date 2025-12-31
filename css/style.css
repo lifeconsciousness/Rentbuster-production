@@ -543,7 +543,7 @@
   -webkit-backdrop-filter: blur(0.7rem);
           backdrop-filter: blur(0.7rem);
   width: 100vw;
-  height: 3.6rem;
+  height: 4.2rem;
   display: flex;
   border-bottom: solid 2px var(--black-main);
   transition: 0.2s ease-in;
@@ -943,6 +943,41 @@ nav {
 @media (max-width: 1100px) {
   .mobile-only-nav {
     display: list-item;
+  }
+}
+
+.mobile-lang-dropdown {
+  position: relative;
+}
+.mobile-lang-dropdown .mobile-lang-toggle {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.mobile-lang-dropdown .mobile-lang-menu {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0.5rem 1.5rem;
+}
+.mobile-lang-dropdown .mobile-lang-menu li {
+  margin: 0.5rem 0;
+}
+.mobile-lang-dropdown .mobile-lang-menu li a {
+  color: var(--black-main);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.mobile-lang-dropdown .mobile-lang-menu li a:hover {
+  opacity: 0.7;
+}
+.mobile-lang-dropdown.lang-open .mobile-lang-menu {
+  display: block;
+}
+@media (min-width: 1100px) {
+  .mobile-lang-dropdown {
+    display: none !important;
   }
 }
 

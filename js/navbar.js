@@ -124,4 +124,15 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
     });
   }
+
+  // Mobile language dropdown toggle
+  const mobileLangToggle = document.querySelector('.mobile-lang-toggle');
+  const mobileLangDropdown = document.querySelector('.mobile-lang-dropdown');
+  
+  if (mobileLangToggle && mobileLangDropdown) {
+    mobileLangToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      mobileLangDropdown.classList.toggle('lang-open');
+    });
+  }
 });
