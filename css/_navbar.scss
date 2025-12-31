@@ -170,6 +170,7 @@ nav {
     padding: min(30vh, 7rem) 0rem;
     font-size: 1.1rem !important;
 
+
     li {
       margin-bottom: 0.8rem;
     }
@@ -195,6 +196,8 @@ nav {
     backdrop-filter: blur(0.7rem); //CHANGED TRANSPARENT
     height: 4rem;
     right: 0rem;
+    // padding-left: 2.7rem;
+
   }
 
   .mobile-navbar-toggle {

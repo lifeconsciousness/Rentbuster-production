@@ -1262,6 +1262,9 @@ nav {
   background: var(--black-main);
   color: var(--white-main);
 }
+.accordion-content p {
+  margin: 1.3rem 0;
+}
 
 @media (max-width: 1300px) {
   .faq h2 {
