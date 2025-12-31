@@ -842,11 +842,13 @@ nav {
 .desktop-menu-dropdown .dropdown-menu li a.dropdown-item::after {
   display: none;
 }
-.desktop-menu-dropdown .dropdown-menu li a.dropdown-item img.dropdown-theme-icon {
+.desktop-menu-dropdown .dropdown-menu li a.dropdown-item .dropdown-theme-icon {
   width: 20px;
   height: 20px;
-  margin-right: 0.6rem;
   flex-shrink: 0;
+  margin: 0;
+  margin-right: 0 !important;
+  padding: 0;
 }
 .desktop-menu-dropdown .dropdown-menu li a.dropdown-item span {
   flex: 1;
@@ -1154,6 +1156,7 @@ nav {
   height: -moz-fit-content;
   height: fit-content;
   padding-bottom: 3rem;
+  padding-top: 3rem;
 }
 .faq h2 {
   padding-top: 1rem;
@@ -1242,7 +1245,7 @@ nav {
   min-height: -moz-fit-content;
   min-height: fit-content;
   padding: 3rem;
-  padding-top: 1rem;
+  padding-top: 3rem;
   padding-bottom: 4rem;
 }
 .contact-us .contact-form {
