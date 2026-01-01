@@ -72,7 +72,7 @@
     <header class="header" id="header">
       <div class="navbar-wrapper">
         <!-- Logo -->
-        <a href="#home"><img src="../img/LOGO_cropped.png" alt="RentBuster logo" /></a>
+        <a href="#home"><img src="../img/LOGO_cropped.png" alt="RentBuster logo"></a>
 
         <!-- Navbar button for mobile -->
         <button class="mobile-navbar-toggle" aria-expanded="false"></button>
@@ -81,19 +81,83 @@
         <!-- Navigation bar -->
         <nav>
           <ul id="navbar" class="navbar" data-visible="false">
-            <li class="active"><a href="#home" class="underline-animation">Home</a></li>
-            <li class="active"><a href="#about-us" class="underline-animation">Über uns</a></li>
+
+            <!-- <li class="active"><a href="https://calculator.rentbuster.nl/" target="_blank" class="underline-animation"
+                style="color: rgb(92, 92, 255); --darkreader-inline-color: var(--darkreader-text-5c5cff, #5a96ff);"
+                data-darkreader-inline-color="">Mietrechner</a></li> -->
+            <!-- <li class="active"><a href="#home" class="underline-animation">Startseite</a></li> -->
+            <li class="active"><a href="#about-us" class="underline-animation">Über mich</a>
+            </li>
             <li class="active"><a href="#how-we-work" class="underline-animation">Wie wir arbeiten</a></li>
             <li class="active"><a href="#faq" class="underline-animation">FAQ</a></li>
-            <li class="active"><a href="#blog" class="underline-animation">Blog</a></li>
-            <li class="active"><a href="#contact-us" class="underline-animation">Kontaktieren Sie uns</a></li>
+            <li class="active"><a href="#blog" class="underline-animation">Nachrichten</a></li>
 
-            <li class="active">
-              <a href="https://www.patreon.com/user?u=83272391" target="_blank"
-                class="underline-animation donate-btn">Spenden
+            <!-- Desktop Menu Dropdown -->
+            <li class="active desktop-menu-dropdown">
+              <a href="#" class="underline-animation menu-toggle" style="color: rgb(92, 92, 255);">Menü ▾</a>
+              <ul class="dropdown-menu">
+                <!-- Language Selector in Dropdown -->
+                <li class="dropdown-lang-menu">
+                  <a href="#" class="dropdown-item">
+                    <!-- <div class="selected-lang" style="width: 30px; height: 10px !important;"></div> -->
+
+                    ‎ ‎ <p style="margin: 0; padding: 0; scale: 1.4; ">🇩🇪</p>  ‎ ‎ ‎ ‎ ‎ ‎ Sprache ›
+                  </a>
+                  <ul class="lang-submenu">
+                    <li><a href="../translatedPages/indexNL.html" id="nl-dropdown">Niederländisch</a></li>
+                    <li><a href="../index.html" id="en-dropdown">Englisch</a></li>
+                    <li><a href="../translatedPages/indexGE.html" id="ge-dropdown">Deutsch</a></li>
+                    <li><a href="../translatedPages/indexFR.html" id="fr-dropdown">Französisch</a></li>
+                    <li><a href="../translatedPages/indexUA.html" id="ua-dropdown">Ukrainisch</a></li>
+                  </ul>
+                </li>
+                <!-- Theme Toggle in Dropdown -->
+                <li>
+                  <a href="#" class="dropdown-item theme-toggle-dropdown" id="theme-toggle-dropdown">
+                    <img src="../img/moon.png" alt="theme toggle" class="dropdown-theme-icon" style="scale: 1.2; margin-left: 2px;">
+                    <span>Design wechseln</span>
+                  </a>
+                </li>
+                <!-- Donate in Dropdown -->
+                <li>
+                  <a href="https://www.patreon.com/user?u=83272391" target="_blank"
+                    class="dropdown-item donate-dropdown" style="color: rgb(92, 92, 255); margin-left: 3px;">
+                    ‎<p style="margin: 0; padding: 0; scale: 1.3; margin-left: 1px; ">💝</p> ‎ ‎ ‎ ‎ ‎ ‎  Spenden
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Mobile: Keep original items -->
+            <li class="active mobile-only-nav">
+              <a href="https://www.patreon.com/user?u=83272391" target="_blank" class="underline-animation donate-btn"
+                style="color: rgb(92, 92, 255); --darkreader-inline-color: var(--darkreader-text-5c5cff, #5a96ff);"
+                data-darkreader-inline-color="">Spenden
                 <div class="donate-shadow"></div>
               </a>
             </li>
+
+            <!-- Mobile Language Menu -->
+            <li class="active mobile-only-nav mobile-lang-dropdown">
+              <a href="#" class="underline-animation mobile-lang-toggle">Sprache ▾</a>
+              <ul class="mobile-lang-menu">
+                <li><a href="../translatedPages/indexNL.html">🇳🇱 Niederländisch</a></li>
+                <li><a href="../index.html">🇬🇧 Englisch</a></li>
+                <li><a href="../translatedPages/indexGE.html">🇩🇪 Deutsch</a></li>
+                <li><a href="../translatedPages/indexFR.html">🇫🇷 Französisch</a></li>
+                <li><a href="../translatedPages/indexUA.html">🇺🇦 Ukrainisch</a></li>
+              </ul>
+            </li>
+
+            <li class="active"><a href="#contact-us" class="underline-animation">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  style="vertical-align: middle; margin-right: 0.3rem;">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                Kontakt
+              </a></li>
 
             <div id="theme-toggle-navbar">
               <img src="../img/moon.png" alt="moon" class="moon" id="moon-navbar">
@@ -103,20 +167,18 @@
         </nav>
       </div>
 
-      <div class="lang-menu">
-        <!-- Language button-flag icon -->
+      <!-- <div class="lang-menu">
         <div class="selected-lang"></div>
-        <!-- List of languages -->
         <ul id="languages">
-          <li><a href="../translatedPages/indexNL.html" id="nl">Dutch</a></li>
-          <li><a href="../index.html" id="en">English</a></li>
-          <li><a href="../translatedPages/indexGE.html" id="ge">German</a></li>
-          <li><a href="../translatedPages/indexFR.html" id="fr">French</a></li>
+          <li><a href="./translatedPages/indexNL.html" id="nl">Dutch</a></li>
+          <li><a href="./index.html" id="en">English</a></li>
+          <li><a href="./translatedPages/indexGE.html" id="ge">German</a></li>
+          <li><a href="./translatedPages/indexFR.html" id="fr">French</a></li>
           <li>
-            <a href="../translatedPages/indexUA.html" id="ua">Ukrainian</a>
+            <a href="./translatedPages/indexUA.html" id="ua">Ukrainian</a>
           </li>
         </ul>
-      </div>
+      </div> -->
     </header>
 
     <!-- Cursor trail -->
@@ -137,11 +199,10 @@
 
     <main id="body">
       <div class="curve"></div>
-      <div class="theme-toggle" id="theme-toggle">
+      <!-- <div class="theme-toggle" id="theme-toggle">
         <img src="../img/moon.png" alt="moon" class="moon" id="moon">
-      </div>
-
-      <!-- HOME SECTION -->
+      </div> -->
+<!-- HOME SECTION -->
       <div class="home-wrapper">
         <div id="home" class="home anim-container" style="justify-content: center;">
           <div class="text-container-home">
@@ -155,37 +216,31 @@
             <!-- <h2>RENT BUSTER!</h2> -->
             <!-- <img class="animated fadeInLeft" src="/img/RentBuster logo without background.png" alt="rentbuster logo"> -->
           </div>
+
           <div class="video-wrapper" style="display: none;">
             <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/xwSltGbK46E"
               title="YouTube video player" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen=""></iframe>
           </div>
-
         </div>
+
+        <!-- Service Blocks -->
+        <div class="service-blocks-container appearing-anim">
+          <a href="https://search.rentbuster.nl" target="_blank" class="service-block service-block-search ">
+            <div class="service-icon">🔍</div>
+            <h3 class="service-title">Suchtool für bustbare Wohnungen</h3>
+            <p class="service-description">Finden Sie bustbare Wohnungen mit nützlichen Einblicken</p>
+          </a>
+
+          <a href="https://calculator.rentbuster.nl" target="_blank" class="service-block service-block-calculator ">
+            <div class="service-icon">🧮</div>
+            <h3 class="service-title">Mietrechner</h3>
+            <p class="service-description">Berechnen Sie die maximal zulässige Miete für Ihr Zuhause</p>
+          </a>
+        </div>
+
       </div>
-
-      <!-- Shortcut to the news section -->
-      <a href="https://calculator.rentbuster.nl" target="_blank" class="appearing-anim">
-        <p class="latest-news">
-
-          <span class="animated-text"
-            style="color: rgb(92, 92, 255); --darkreader-inline-color: var(--darkreader-text-5c5cff, #5a96ff);"
-            data-darkreader-inline-color="">
-            Probieren Sie unseren neuen Mietrechner
-          </span>
-
-          <span class="particles">
-            <span class="particle">
-              <svg viewBox="0 0 512 512">
-                <path
-                  d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z">
-                </path>
-              </svg>
-            </span>
-          </span>
-        </p>
-      </a>
 
       <!-- ABOUT US SECTION -->
       <div class="about-us-container" id="about-us" style="margin-top: 0;">

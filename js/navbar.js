@@ -102,8 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.classList.toggle('dark-theme');
       const isDark = document.body.classList.contains('dark-theme');
       
-      const sunPath = './img/sun.png';
-      const moonPath = './img/moon.png';
+      const sunPath = '../img/sun.png';
+      const moonPath = '../img/moon.png';
       const imageSrc = isDark ? sunPath : moonPath;
       
       // Update all theme icons
